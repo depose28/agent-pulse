@@ -18,14 +18,15 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-lg border-b border-border/50"
+          ? "bg-background/95 backdrop-blur-sm border-b border-border"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-1.5 group">
+          {/* Logo with accent bar */}
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="w-0.5 h-6 bg-accent-orange rounded-full" />
             <span className="text-xl font-serif text-foreground tracking-tight">
               Agent<span className="font-serif-italic">Pulse</span>
             </span>
@@ -56,9 +57,9 @@ const Navbar = () => {
           {/* CTA */}
           <a
             href="#hero"
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 holo-button rounded-lg text-sm font-sans font-medium text-foreground transition-colors"
+            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 btn-primary rounded-lg text-sm font-sans"
           >
-            Get Your Score
+            Get Started
           </a>
         </div>
       </div>

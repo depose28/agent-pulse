@@ -46,9 +46,9 @@ const layers = [
 const FrameworkSection = () => {
   return (
     <section className="py-28 relative">
-      {/* Holographic divider at top */}
-      <div className="absolute top-0 left-0 right-0 holo-divider" />
-      <div className="absolute inset-0 dot-pattern opacity-10" />
+      {/* Section divider */}
+      <div className="absolute top-0 left-0 right-0 section-divider" />
+      <div className="absolute inset-0 topo-pattern opacity-40" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -56,23 +56,27 @@ const FrameworkSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground mb-6 tracking-tight">
+          <div className="section-accent mb-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
+              The Framework
+            </span>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-display font-serif text-foreground mb-6 tracking-tight max-w-4xl">
             Most tools check SEO.
             <br />
             We check if AI can actually{" "}
-            <span className="font-serif-italic">shop</span> your
-            site.
+            <span className="font-serif-italic">shop</span> your site.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">
+          <p className="text-lg text-muted-foreground max-w-2xl font-sans">
             Our scoring framework evaluates your entire AI commerce journey —
             from discovery to checkout.
           </p>
         </motion.div>
 
         {/* Framework Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl">
           {layers.map((layer, index) => (
             <motion.div
               key={layer.name}
@@ -80,25 +84,25 @@ const FrameworkSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="holo-border rounded-xl p-8 bg-card transition-all"
+              className="card-elevated p-8 transition-all hover:border-foreground/20"
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-surface border border-border/30 flex items-center justify-center">
-                    <layer.icon className="w-5 h-5 text-muted-foreground" />
+                  <div className="w-10 h-10 rounded-lg bg-surface border border-border flex items-center justify-center">
+                    <layer.icon className="w-5 h-5 text-foreground" />
                   </div>
                   <span className="font-mono text-sm tracking-wider text-foreground">
                     {layer.name}
                   </span>
                 </div>
-                <span className="text-xs font-mono text-muted-foreground/60">
+                <span className="text-xs font-mono text-muted-foreground">
                   {layer.weight}
                 </span>
               </div>
 
               {/* Question */}
-              <h3 className="text-lg font-serif text-foreground mb-6">
+              <h3 className="text-xl font-serif text-foreground mb-6">
                 {layer.question}
               </h3>
 
@@ -109,15 +113,15 @@ const FrameworkSection = () => {
                     key={i}
                     className="flex items-center gap-2.5 text-sm text-muted-foreground font-sans"
                   >
-                    <div className="w-1 h-1 rounded-full bg-muted-foreground/40" />
+                    <div className="w-1 h-1 rounded-full bg-accent-orange" />
                     {signal}
                   </li>
                 ))}
               </ul>
 
               {/* Code snippet preview */}
-              <div className="mt-6 bg-surface rounded-lg p-4 border border-border/30">
-                <pre className="text-xs font-mono text-muted-foreground/70 overflow-x-auto">
+              <div className="mt-6 terminal-block p-4">
+                <pre className="text-xs font-mono text-white/70 overflow-x-auto">
                   {layer.name === "FIND" && (
                     <code>
 {`{

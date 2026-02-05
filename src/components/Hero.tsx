@@ -18,117 +18,123 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center pt-20 pb-32 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-24 pb-32 overflow-hidden"
     >
-      {/* Subtle background effects */}
-      <div className="absolute inset-0 code-texture" />
-      <div className="absolute inset-0 dot-pattern opacity-20" />
+      {/* Subtle topographic pattern */}
+      <div className="absolute inset-0 topo-pattern opacity-60" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Subtle Badge */}
+        <div className="max-w-5xl mx-auto">
+          {/* Large editorial headline - centered like AMP */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-display-lg font-serif text-foreground mb-8 leading-[1.05] tracking-tight">
+              <span className="font-serif-italic">Invisible</span>
+              <br />
+              To AI Shoppers?
+            </h1>
+          </motion.div>
+
+          {/* Description + CTA row - like AMP's layout */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border/50 mb-10"
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-6"
           >
-            <span className="text-xs tracking-wide text-muted-foreground uppercase">
-              AI Commerce Readiness Diagnostic
-            </span>
+            {/* Left: Description with accent bar */}
+            <div className="max-w-md text-center lg:text-left lg:border-l-2 lg:border-border lg:pl-6">
+              <p className="text-lg text-foreground mb-2 font-sans">
+                AgentPulse scans your e-commerce site for AI readiness.
+              </p>
+              <p className="text-muted-foreground font-sans">
+                Get your AI Commerce Score in 60 seconds. Free.
+              </p>
+            </div>
+
+            {/* Right: CTA Button - solid dark like AMP */}
+            <a
+              href="#scan"
+              className="inline-flex items-center gap-2 px-7 py-4 btn-primary rounded-lg text-base font-sans group"
+            >
+              Get Started for Free
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </a>
           </motion.div>
 
-          {/* Headline - Large and commanding */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-foreground mb-8 leading-[1.1] tracking-tight"
-          >
-            Is your store{" "}
-            <span className="font-serif-italic">invisible</span>{" "}
-            to AI shopping agents?
-          </motion.h1>
-
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto font-sans"
-          >
-            Get your AI Commerce Score in 60 seconds. Free.
-          </motion.p>
-
-          {/* URL Input Form - Refined */}
-          <motion.form
+          {/* URL Input Section */}
+          <motion.div
+            id="scan"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            onSubmit={handleSubmit}
-            className="max-w-xl mx-auto mb-8"
+            className="max-w-2xl mx-auto mt-20"
           >
-            <div className="relative flex flex-col sm:flex-row gap-3">
-              <div className="relative flex-1 holo-border rounded-lg">
-                <input
-                  type="url"
-                  value={url}
-                  onChange={(e) => setUrl(e.target.value)}
-                  placeholder="Enter your website URL"
-                  className="w-full px-5 py-4 bg-card rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-foreground/20 transition-all font-sans text-base"
-                  required
-                />
+            <form onSubmit={handleSubmit}>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <div className="relative flex-1">
+                  <input
+                    type="url"
+                    value={url}
+                    onChange={(e) => setUrl(e.target.value)}
+                    placeholder="Enter your website URL"
+                    className="w-full px-5 py-4 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-foreground/10 focus:border-foreground/30 transition-all font-sans text-base"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={isScanning}
+                  className="group px-6 py-4 btn-primary rounded-lg font-sans font-medium transition-all flex items-center justify-center gap-2"
+                >
+                  {isScanning ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-background/30 border-t-background rounded-full animate-spin" />
+                      <span>Scanning...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Get My Score</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    </>
+                  )}
+                </button>
               </div>
-              <button
-                type="submit"
-                disabled={isScanning}
-                className="group relative px-6 py-4 holo-button rounded-lg font-sans font-medium text-foreground transition-all flex items-center justify-center gap-2"
-              >
-                {isScanning ? (
-                  <>
-                    <div className="w-4 h-4 border-2 border-foreground/30 border-t-foreground rounded-full animate-spin" />
-                    <span>Scanning...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>Get My Score</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                  </>
-                )}
-              </button>
-            </div>
-          </motion.form>
+            </form>
 
-          {/* Trust indicators - Smaller and more muted */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground/70"
-          >
-            <span>No credit card required</span>
-            <span className="w-1 h-1 rounded-full bg-muted-foreground/30" />
-            <span>Results in under 2 minutes</span>
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground mt-4">
+              <span>No credit card required</span>
+              <span className="w-1 h-1 rounded-full bg-border" />
+              <span>Results in under 2 minutes</span>
+            </div>
           </motion.div>
 
-          {/* Score Preview - Premium card with holographic border */}
+          {/* Score Preview Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="mt-20 relative"
+            className="mt-20 max-w-md mx-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none" />
-            <div className="holo-border rounded-xl p-8 max-w-md mx-auto bg-card glow-subtle">
+            <div className="card-elevated p-8">
               <div className="flex items-center justify-between mb-8">
                 <div className="text-left">
-                  <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">AI Commerce Score™</p>
-                  <p className="text-xs text-muted-foreground/60 font-mono">example-store.com</p>
+                  <p className="text-xs text-muted-foreground mb-1 uppercase tracking-widest font-sans">
+                    AI Commerce Score™
+                  </p>
+                  <p className="text-xs text-muted-foreground/60 font-mono">
+                    example-store.com
+                  </p>
                 </div>
                 <ScoreGauge score={73} size={72} />
               </div>
-              
-              {/* Layer breakdown - Thinner progress bars */}
+
+              {/* Layer breakdown */}
               <div className="space-y-4">
                 {[
                   { name: "FIND", score: 82, color: "bg-score-high" },
@@ -139,7 +145,7 @@ const Hero = () => {
                     <span className="text-[10px] font-mono text-muted-foreground w-12 tracking-wider">
                       {layer.name}
                     </span>
-                    <div className="flex-1 h-1 bg-border rounded-full overflow-hidden">
+                    <div className="flex-1 h-1.5 bg-border rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${layer.score}%` }}
@@ -147,7 +153,7 @@ const Hero = () => {
                         className={`h-full ${layer.color} rounded-full`}
                       />
                     </div>
-                    <span className="text-xs font-mono text-foreground/80 w-8 text-right">
+                    <span className="text-xs font-mono text-foreground w-8 text-right">
                       {layer.score}
                     </span>
                   </div>
