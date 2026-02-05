@@ -37,8 +37,8 @@ const faqs = [
 const FAQSection = () => {
   return (
     <section id="faq" className="py-28 relative">
-      {/* Holographic divider at top */}
-      <div className="absolute top-0 left-0 right-0 holo-divider" />
+      {/* Section divider */}
+      <div className="absolute top-0 left-0 right-0 section-divider" />
 
       <div className="container mx-auto px-6">
         {/* Section Header */}
@@ -46,9 +46,14 @@ const FAQSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground mb-6 tracking-tight">
+          <div className="section-accent mb-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
+              FAQ
+            </span>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-display font-serif text-foreground tracking-tight">
             Frequently asked{" "}
             <span className="font-serif-italic">questions</span>
           </h2>
@@ -59,14 +64,14 @@ const FAQSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto"
+          className="max-w-2xl"
         >
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="holo-border rounded-lg px-6 bg-card data-[state=open]:glow-subtle"
+                className="card-elevated px-6 data-[state=open]:border-foreground/20"
               >
                 <AccordionTrigger className="text-left text-foreground hover:text-foreground hover:no-underline py-5 font-serif text-lg">
                   {faq.question}

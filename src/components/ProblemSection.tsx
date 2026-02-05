@@ -6,22 +6,27 @@ const ProblemSection = () => {
 
   return (
     <section className="py-28 relative overflow-hidden">
-      {/* Holographic divider at top */}
-      <div className="absolute top-0 left-0 right-0 holo-divider" />
+      {/* Section divider */}
+      <div className="absolute top-0 left-0 right-0 section-divider" />
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
+        {/* Section Header with accent bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground mb-6 tracking-tight">
+          <div className="section-accent mb-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
+              The Problem
+            </span>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-display font-serif text-foreground mb-6 tracking-tight max-w-3xl">
             The way people shop is{" "}
             <span className="font-serif-italic">changing</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">
+          <p className="text-lg text-muted-foreground max-w-2xl font-sans">
             AI shopping agents are becoming the new storefront. But what they
             see is very different from what humans see.
           </p>
@@ -32,14 +37,14 @@ const ProblemSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex justify-center mb-12"
+          className="flex justify-start mb-8"
         >
-          <div className="inline-flex p-1 rounded-lg bg-surface border border-border/50">
+          <div className="inline-flex p-1 rounded-lg bg-card border border-border">
             <button
               onClick={() => setViewMode("human")}
-              className={`px-5 py-2 rounded-md text-sm font-sans font-medium transition-all ${
+              className={`px-5 py-2.5 rounded-md text-sm font-sans font-medium transition-all ${
                 viewMode === "human"
-                  ? "bg-card text-foreground holo-border"
+                  ? "bg-foreground text-background"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -47,9 +52,9 @@ const ProblemSection = () => {
             </button>
             <button
               onClick={() => setViewMode("agent")}
-              className={`px-5 py-2 rounded-md text-sm font-sans font-medium transition-all ${
+              className={`px-5 py-2.5 rounded-md text-sm font-sans font-medium transition-all ${
                 viewMode === "agent"
-                  ? "bg-card text-foreground holo-border"
+                  ? "bg-foreground text-background"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -63,22 +68,24 @@ const ProblemSection = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl"
         >
           {viewMode === "human" ? (
-            <div className="holo-border rounded-xl p-8 bg-card transition-all duration-500">
+            <div className="card-elevated p-8 transition-all duration-500">
               {/* Human view - clean product display */}
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="w-full md:w-1/2">
-                  <div className="aspect-square bg-surface rounded-lg flex items-center justify-center border border-border/30">
+                  <div className="aspect-square bg-surface rounded-lg flex items-center justify-center border border-border">
                     <div className="text-center p-6">
-                      <div className="w-20 h-20 bg-border/50 rounded-lg mx-auto mb-4" />
-                      <p className="text-muted-foreground/50 text-sm font-sans">Product Image</p>
+                      <div className="w-24 h-24 bg-border/50 rounded-lg mx-auto mb-4" />
+                      <p className="text-muted-foreground/60 text-sm font-sans">
+                        Product Image
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col justify-center">
-                  <h3 className="text-2xl font-serif text-foreground mb-3">
+                  <h3 className="text-3xl font-serif text-foreground mb-3">
                     Premium Running Shoes
                   </h3>
                   <p className="text-3xl font-serif text-foreground mb-4">
@@ -89,75 +96,79 @@ const ProblemSection = () => {
                     cushioning and breathable mesh upper.
                   </p>
                   <div className="flex items-center gap-2 mb-6">
-                    <div className="flex text-score-medium text-sm">{"★★★★★"}</div>
+                    <div className="flex text-accent-gold text-sm">
+                      {"★★★★★"}
+                    </div>
                     <span className="text-muted-foreground text-sm font-sans">
                       4.8 (2,847 reviews)
                     </span>
                   </div>
-                  <button className="w-full holo-button text-foreground py-3 rounded-lg font-sans font-medium">
+                  <button className="w-full btn-primary py-3 rounded-lg font-sans font-medium">
                     Add to Cart
                   </button>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="holo-border rounded-xl p-6 bg-card transition-all duration-500">
-              {/* Agent view - Bloomberg Terminal aesthetic */}
+            <div className="terminal-block p-6 transition-all duration-500">
+              {/* Agent view - Terminal aesthetic */}
               <div className="grid md:grid-cols-2 gap-4">
                 {/* Request Card */}
-                <div className="bg-surface rounded-lg border border-border/30 p-5">
-                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground/70 mb-3">Request</p>
-                  <p className="text-foreground font-sans">
+                <div className="bg-white/5 rounded-lg border border-white/10 p-5">
+                  <p className="text-[10px] uppercase tracking-wider text-white/40 mb-3 font-mono">
+                    Request
+                  </p>
+                  <p className="text-white/90 font-sans">
                     I want gear to start trail running this fall
                   </p>
                 </div>
 
                 {/* Normalized Intent */}
-                <div className="bg-surface rounded-lg border border-border/30 p-5">
-                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground/70 mb-3">
+                <div className="bg-white/5 rounded-lg border border-white/10 p-5">
+                  <p className="text-[10px] uppercase tracking-wider text-white/40 mb-3 font-mono">
                     Normalized Intent
                   </p>
                   <div className="font-mono text-sm space-y-1">
                     <p>
-                      <span className="text-muted-foreground/60">intent:</span>{" "}
-                      <span className="text-holo-blue">find_trail_running_gear</span>
+                      <span className="text-white/40">intent:</span>{" "}
+                      <span className="text-amber-400">find_trail_running_gear</span>
                     </p>
                     <p>
-                      <span className="text-muted-foreground/60">season:</span>{" "}
-                      <span className="text-holo-lavender">fall</span>
+                      <span className="text-white/40">season:</span>{" "}
+                      <span className="text-emerald-400">fall</span>
                     </p>
                     <p>
-                      <span className="text-muted-foreground/60">goal:</span>{" "}
-                      <span className="text-holo-lavender">starter_outfit</span>
+                      <span className="text-white/40">goal:</span>{" "}
+                      <span className="text-emerald-400">starter_outfit</span>
                     </p>
                   </div>
                 </div>
 
                 {/* JSON Response */}
-                <div className="md:col-span-2 bg-surface rounded-lg border border-border/30 p-5">
-                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground/70 mb-3">
+                <div className="md:col-span-2 bg-white/5 rounded-lg border border-white/10 p-5">
+                  <p className="text-[10px] uppercase tracking-wider text-white/40 mb-3 font-mono">
                     Signed Response
                   </p>
-                  <pre className="font-mono text-xs text-foreground/80 overflow-x-auto">
+                  <pre className="font-mono text-xs text-white/80 overflow-x-auto">
                     <code>
 {`{
   "intent_summary": {
-    "intent": `}<span className="text-holo-lavender">"find_trail_running_gear"</span>{`,
-    "season": `}<span className="text-holo-lavender">"fall"</span>{`,
-    "goal": `}<span className="text-holo-lavender">"starter_outfit"</span>{`
+    "intent": `}<span className="text-emerald-400">"find_trail_running_gear"</span>{`,
+    "season": `}<span className="text-emerald-400">"fall"</span>{`,
+    "goal": `}<span className="text-emerald-400">"starter_outfit"</span>{`
   },
   "search_activity": {
-    "products_scanned": `}<span className="text-score-medium">389</span>{`,
-    "pages_parsed": `}<span className="text-score-medium">38</span>{`,
-    "reviews_analyzed": `}<span className="text-score-medium">124</span>{`
+    "products_scanned": `}<span className="text-amber-400">389</span>{`,
+    "pages_parsed": `}<span className="text-amber-400">38</span>{`,
+    "reviews_analyzed": `}<span className="text-amber-400">124</span>{`
   },
   "result_summary": {
     "recommendations": [
-      `}<span className="text-holo-blue">"Alpine Trail Runner GTX"</span>{`,
-      `}<span className="text-holo-blue">"DryFit Trail Cap"</span>{`,
-      `}<span className="text-holo-blue">"Merino Performance Socks"</span>{`
+      `}<span className="text-sky-400">"Alpine Trail Runner GTX"</span>{`,
+      `}<span className="text-sky-400">"DryFit Trail Cap"</span>{`,
+      `}<span className="text-sky-400">"Merino Performance Socks"</span>{`
     ],
-    "confidence": `}<span className="text-score-high">0.93</span>{`
+    "confidence": `}<span className="text-emerald-400">0.93</span>{`
   }
 }`}
                     </code>
@@ -165,12 +176,12 @@ const ProblemSection = () => {
                 </div>
               </div>
 
-              {/* Error indicator - more subtle */}
-              <div className="mt-4 p-4 bg-destructive/5 border border-destructive/20 rounded-lg">
-                <p className="text-sm text-destructive/90 font-sans font-medium">
+              {/* Error indicator */}
+              <div className="mt-4 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                <p className="text-sm text-red-400 font-sans font-medium">
                   ⚠ Your site returned incomplete data
                 </p>
-                <p className="text-xs text-muted-foreground mt-1 font-sans">
+                <p className="text-xs text-white/50 mt-1 font-sans">
                   Missing: Product schema, Offer markup, Review aggregation
                 </p>
               </div>
@@ -183,7 +194,7 @@ const ProblemSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid sm:grid-cols-3 gap-4 mt-20 max-w-3xl mx-auto"
+          className="grid sm:grid-cols-3 gap-4 mt-20 max-w-4xl"
         >
           {[
             { stat: "10x", label: "Growth in AI-influenced purchases by 2027" },
@@ -192,9 +203,9 @@ const ProblemSection = () => {
           ].map((item, i) => (
             <div
               key={i}
-              className="text-center p-6 rounded-lg holo-border bg-card"
+              className="p-6 rounded-lg card-elevated border-l-2 border-l-accent-orange"
             >
-              <p className="text-3xl font-serif text-foreground mb-2">
+              <p className="text-4xl font-serif text-foreground mb-2">
                 {item.stat}
               </p>
               <p className="text-sm text-muted-foreground font-sans">

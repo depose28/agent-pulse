@@ -43,6 +43,8 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          orange: "hsl(var(--accent-orange))",
+          gold: "hsl(var(--accent-gold))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -71,11 +73,9 @@ export default {
           medium: "hsl(var(--score-medium))",
           high: "hsl(var(--score-high))",
         },
-        holo: {
-          blue: "hsl(var(--holo-blue))",
-          lavender: "hsl(var(--holo-lavender))",
-          pink: "hsl(var(--holo-pink))",
-          gold: "hsl(var(--holo-gold))",
+        terminal: {
+          bg: "hsl(var(--terminal-bg))",
+          fg: "hsl(var(--terminal-fg))",
         },
       },
       borderRadius: {
@@ -85,10 +85,13 @@ export default {
       },
       fontFamily: {
         sans: ["DM Sans", "sans-serif"],
-        serif: ["Instrument Serif", "serif"],
+        serif: ["Cormorant Garamond", "Georgia", "serif"],
         mono: ["IBM Plex Mono", "monospace"],
       },
       fontSize: {
+        "display-xl": ["5.5rem", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "display-lg": ["4.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        "display": ["3.5rem", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
         base: ["17px", "1.6"],
       },
       letterSpacing: {
@@ -120,10 +123,6 @@ export default {
           from: { strokeDashoffset: "283" },
           to: { strokeDashoffset: "var(--score-offset)" },
         },
-        "holo-shift": {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -132,7 +131,6 @@ export default {
         "slide-in-right": "slide-in-right 0.5s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out forwards",
         "score-fill": "score-fill 1.5s ease-out forwards",
-        "holo-shift": "holo-shift 8s ease-in-out infinite",
       },
     },
   },

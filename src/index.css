@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,83 +6,85 @@
 
 @layer base {
   :root {
-    /* Premium Dark Theme - Deep Navy/Black */
-    --background: 230 25% 4%;
-    --foreground: 220 13% 93%;
+    /* AMP-Inspired Warm Light Theme */
+    --background: 50 25% 91%;
+    --foreground: 40 10% 12%;
 
-    --card: 230 20% 7%;
-    --card-foreground: 220 13% 93%;
+    --card: 50 20% 94%;
+    --card-foreground: 40 10% 12%;
 
-    --popover: 230 20% 7%;
-    --popover-foreground: 220 13% 93%;
+    --popover: 50 20% 94%;
+    --popover-foreground: 40 10% 12%;
 
-    --primary: 220 13% 91%;
-    --primary-foreground: 230 25% 4%;
+    --primary: 40 10% 12%;
+    --primary-foreground: 50 25% 91%;
 
-    --secondary: 230 15% 12%;
-    --secondary-foreground: 220 13% 93%;
+    --secondary: 50 15% 85%;
+    --secondary-foreground: 40 10% 12%;
 
-    --muted: 230 15% 12%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 50 15% 85%;
+    --muted-foreground: 40 10% 45%;
 
-    --accent: 230 15% 15%;
-    --accent-foreground: 220 13% 93%;
+    --accent: 25 85% 55%;
+    --accent-foreground: 50 25% 96%;
 
-    --destructive: 0 50% 45%;
-    --destructive-foreground: 220 13% 93%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 50 25% 96%;
 
-    --border: 230 15% 15%;
-    --input: 230 15% 12%;
-    --ring: 230 15% 25%;
+    --border: 40 15% 80%;
+    --input: 50 15% 88%;
+    --ring: 40 15% 70%;
 
     --radius: 0.5rem;
 
-    /* Score Colors - Muted and sophisticated */
-    --score-low: 0 45% 50%;
-    --score-medium: 38 70% 50%;
-    --score-high: 150 40% 45%;
+    /* Score Colors - Sophisticated muted tones */
+    --score-low: 0 50% 55%;
+    --score-medium: 38 80% 50%;
+    --score-high: 150 35% 40%;
 
     /* Custom Colors */
-    --surface: 230 18% 9%;
-    --surface-elevated: 230 15% 12%;
+    --surface: 50 18% 88%;
+    --surface-elevated: 50 20% 92%;
 
-    /* Holographic gradient colors */
-    --holo-blue: 210 80% 70%;
-    --holo-lavender: 270 60% 75%;
-    --holo-pink: 320 50% 70%;
-    --holo-gold: 40 60% 70%;
+    /* Accent orange for highlights */
+    --accent-orange: 25 85% 55%;
+    --accent-gold: 42 75% 50%;
+
+    /* Terminal/code block dark */
+    --terminal-bg: 40 15% 15%;
+    --terminal-fg: 50 15% 85%;
 
     /* Sidebar - keeping for compatibility */
-    --sidebar-background: 230 25% 4%;
-    --sidebar-foreground: 220 13% 93%;
-    --sidebar-primary: 220 13% 91%;
-    --sidebar-primary-foreground: 230 25% 4%;
-    --sidebar-accent: 230 15% 15%;
-    --sidebar-accent-foreground: 220 13% 93%;
-    --sidebar-border: 230 15% 15%;
-    --sidebar-ring: 230 15% 25%;
+    --sidebar-background: 50 25% 91%;
+    --sidebar-foreground: 40 10% 12%;
+    --sidebar-primary: 40 10% 12%;
+    --sidebar-primary-foreground: 50 25% 91%;
+    --sidebar-accent: 50 15% 85%;
+    --sidebar-accent-foreground: 40 10% 12%;
+    --sidebar-border: 40 15% 80%;
+    --sidebar-ring: 40 15% 70%;
   }
 
   .dark {
-    --background: 230 25% 4%;
-    --foreground: 220 13% 93%;
-    --card: 230 20% 7%;
-    --card-foreground: 220 13% 93%;
-    --popover: 230 20% 7%;
-    --popover-foreground: 220 13% 93%;
-    --primary: 220 13% 91%;
-    --primary-foreground: 230 25% 4%;
-    --secondary: 230 15% 12%;
-    --secondary-foreground: 220 13% 93%;
-    --muted: 230 15% 12%;
-    --muted-foreground: 220 10% 55%;
-    --accent: 230 15% 15%;
-    --accent-foreground: 220 13% 93%;
+    --background: 40 15% 8%;
+    --foreground: 50 15% 90%;
+    --card: 40 12% 12%;
+    --card-foreground: 50 15% 90%;
+    --popover: 40 12% 12%;
+    --popover-foreground: 50 15% 90%;
+    --primary: 50 15% 90%;
+    --primary-foreground: 40 15% 8%;
+    --secondary: 40 10% 18%;
+    --secondary-foreground: 50 15% 90%;
+    --muted: 40 10% 18%;
+    --muted-foreground: 50 10% 55%;
+    --accent: 25 85% 55%;
+    --accent-foreground: 50 25% 96%;
     --destructive: 0 50% 45%;
-    --destructive-foreground: 220 13% 93%;
-    --border: 230 15% 15%;
-    --input: 230 15% 12%;
-    --ring: 230 15% 25%;
+    --destructive-foreground: 50 15% 90%;
+    --border: 40 10% 20%;
+    --input: 40 10% 15%;
+    --ring: 40 10% 30%;
   }
 }
 
@@ -102,14 +104,16 @@
     line-height: 1.6;
   }
 
-  /* Premium Typography */
+  /* Premium Editorial Typography - Cormorant Garamond */
   .font-serif {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
   }
 
   .font-serif-italic {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
+    font-weight: 500;
   }
 
   .font-mono {
@@ -117,120 +121,88 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Instrument Serif', serif;
-    letter-spacing: -0.02em;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer utilities {
-  /* Holographic border effect */
-  .holo-border {
+  /* Section accent line - orange vertical bar like AMP */
+  .section-accent {
     position: relative;
+    padding-left: 1.25rem;
+  }
+
+  .section-accent::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: hsl(var(--accent-orange));
+    border-radius: 2px;
+  }
+
+  /* Subtle topographic wave pattern background */
+  .topo-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cpath fill='none' stroke='%23a09080' stroke-opacity='0.08' stroke-width='1' d='M0 50 Q100 30 200 50 T400 50 M0 100 Q100 80 200 100 T400 100 M0 150 Q100 130 200 150 T400 150 M0 200 Q100 180 200 200 T400 200 M0 250 Q100 230 200 250 T400 250 M0 300 Q100 280 200 300 T400 300 M0 350 Q100 330 200 350 T400 350'/%3E%3C/svg%3E");
+    background-size: 400px 400px;
+  }
+
+  /* Card with subtle border */
+  .card-elevated {
     background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
     border-radius: var(--radius);
   }
 
-  .holo-border::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--holo-blue) / 0.3),
-      hsl(var(--holo-lavender) / 0.2),
-      hsl(var(--holo-pink) / 0.15),
-      hsl(var(--holo-gold) / 0.2),
-      hsl(var(--holo-blue) / 0.3)
-    );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
+  /* Terminal/code block styling - dark on light */
+  .terminal-block {
+    background: hsl(var(--terminal-bg));
+    color: hsl(var(--terminal-fg));
+    border-radius: calc(var(--radius) + 2px);
+    font-family: 'IBM Plex Mono', monospace;
   }
 
-  .holo-border:hover::before {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--holo-blue) / 0.5),
-      hsl(var(--holo-lavender) / 0.35),
-      hsl(var(--holo-pink) / 0.25),
-      hsl(var(--holo-gold) / 0.35),
-      hsl(var(--holo-blue) / 0.5)
-    );
+  /* Primary CTA button - solid dark */
+  .btn-primary {
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
+    font-weight: 500;
+    transition: all 0.2s ease;
   }
 
-  /* Holographic button */
-  .holo-button {
-    position: relative;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--holo-blue) / 0.15),
-      hsl(var(--holo-lavender) / 0.1),
-      hsl(var(--holo-pink) / 0.08),
-      hsl(var(--holo-gold) / 0.1)
-    );
-    border: 1px solid hsl(var(--foreground) / 0.15);
-    transition: all 0.3s ease;
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
   }
 
-  .holo-button:hover {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--holo-blue) / 0.25),
-      hsl(var(--holo-lavender) / 0.18),
-      hsl(var(--holo-pink) / 0.12),
-      hsl(var(--holo-gold) / 0.18)
-    );
-    border-color: hsl(var(--foreground) / 0.25);
+  /* Secondary button - outline */
+  .btn-secondary {
+    background: transparent;
+    color: hsl(var(--foreground));
+    border: 1px solid hsl(var(--border));
+    font-weight: 500;
+    transition: all 0.2s ease;
   }
 
-  /* Holographic divider */
-  .holo-divider {
+  .btn-secondary:hover {
+    border-color: hsl(var(--foreground));
+    background: hsl(var(--foreground) / 0.05);
+  }
+
+  /* Section divider - subtle line */
+  .section-divider {
     height: 1px;
     background: linear-gradient(
       90deg,
       transparent,
-      hsl(var(--holo-blue) / 0.3),
-      hsl(var(--holo-lavender) / 0.25),
-      hsl(var(--holo-pink) / 0.2),
-      hsl(var(--holo-gold) / 0.25),
-      hsl(var(--holo-blue) / 0.3),
+      hsl(var(--border)),
+      hsl(var(--border)),
       transparent
     );
-  }
-
-  /* Holographic ring for score gauge */
-  .holo-ring {
-    stroke: url(#holoGradient);
-  }
-
-  /* Subtle glow effects */
-  .glow-subtle {
-    box-shadow: 0 0 40px hsl(var(--holo-blue) / 0.08),
-                0 0 80px hsl(var(--holo-lavender) / 0.05);
-  }
-
-  /* Code texture overlay - more subtle */
-  .code-texture {
-    position: relative;
-  }
-
-  .code-texture::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ctext x='10' y='20' fill='%23ffffff' fill-opacity='0.015' font-family='monospace' font-size='8'%3E%7B%22product%22%7D%3C/text%3E%3Ctext x='50' y='45' fill='%23ffffff' fill-opacity='0.015' font-family='monospace' font-size='8'%3E%22price%22:%3C/text%3E%3Ctext x='20' y='70' fill='%23ffffff' fill-opacity='0.015' font-family='monospace' font-size='8'%3E%22@type%22%3C/text%3E%3Ctext x='60' y='90' fill='%23ffffff' fill-opacity='0.015' font-family='monospace' font-size='8'%3Eschema%3C/text%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  /* Dot pattern - more subtle */
-  .dot-pattern {
-    background-image: radial-gradient(circle, hsl(var(--muted-foreground) / 0.08) 1px, transparent 1px);
-    background-size: 32px 32px;
   }
 
   /* Score colors */
@@ -270,20 +242,29 @@
     background-color: hsl(var(--score-high));
   }
 
-  /* Text styles */
-  .text-warm-white {
-    color: hsl(220 13% 93%);
+  /* Text accent orange */
+  .text-accent-orange {
+    color: hsl(var(--accent-orange));
   }
 
-  .text-warm-gray {
-    color: hsl(220 10% 55%);
+  /* Code syntax highlighting for light theme */
+  .syntax-string {
+    color: hsl(150 50% 35%);
+  }
+
+  .syntax-number {
+    color: hsl(25 85% 45%);
+  }
+
+  .syntax-key {
+    color: hsl(40 10% 45%);
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - subtle */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -291,8 +272,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted));
-  border-radius: 3px;
+  background: hsl(var(--border));
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -301,6 +282,6 @@
 
 /* Selection styling */
 ::selection {
-  background: hsl(var(--holo-lavender) / 0.3);
+  background: hsl(var(--accent-orange) / 0.2);
   color: hsl(var(--foreground));
 }
