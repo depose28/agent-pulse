@@ -10,17 +10,22 @@ const faqs = [
   {
     question: "What is an AI Commerce Score?",
     answer:
-      "The AI Commerce Score is a 0-100 rating that measures how well your e-commerce site is optimized for AI shopping agents. It evaluates structured data, schema markup, and protocol readiness across three layers: Find (discovery), Trust (verification), and Buy (purchase completion).",
+      "The AI Commerce Score is a 0-100 rating that measures how well your website is optimized for AI shopping agents. It evaluates structured data, schema markup, and protocol readiness across three layers: Find (discovery), Trust (verification), and Buy (purchase completion).",
   },
   {
     question: 'What does "AI shopping agent" mean?',
     answer:
-      "AI shopping agents are automated systems that help users discover and purchase products. Examples include ChatGPT plugins, Perplexity Shopping, Google Shopping Graph, and emerging AI commerce protocols. These agents read and interpret your site's structured data to understand your products.",
+      "AI shopping agents are automated systems that help users discover and purchase products or services. Examples include ChatGPT plugins, Perplexity Shopping, Google Shopping Graph, and emerging AI commerce protocols. These agents read and interpret your site's structured data to understand your offerings.",
+  },
+  {
+    question: "Is this only for e-commerce stores?",
+    answer:
+      "No. AgentPulse works for any website where AI agents might discover, evaluate, or transact — online stores, service businesses, marketplaces, SaaS pricing pages, booking sites, and more. If an AI agent can interact with your site, we can score it.",
   },
   {
     question: "How is this different from an SEO audit?",
     answer:
-      "Traditional SEO audits focus on search engine visibility for humans. AgentPulse specifically analyzes the machine-readable signals that AI agents use — Schema.org markup, JSON-LD, Open Graph, and commerce protocol readiness. We check if AI can actually shop your site, not just find it.",
+      "Traditional SEO audits focus on search engine visibility for humans. AgentPulse specifically analyzes the machine-readable signals that AI agents use — Schema.org markup, JSON-LD, Open Graph, and commerce protocol readiness. We check if AI can actually interact with your site, not just find it.",
   },
   {
     question: "How long does a scan take?",

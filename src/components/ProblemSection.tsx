@@ -14,7 +14,7 @@ const ProblemSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 max-w-3xl mx-auto"
+          className="text-center mb-12 max-w-3xl mx-auto"
         >
           <p className="text-sm font-mono text-muted-foreground uppercase tracking-widest mb-4">
             The Shift
@@ -26,6 +26,23 @@ const ProblemSection = () => {
           <p className="text-lg text-muted-foreground font-sans">
             What you see isn't what AI sees. The gap between human experience and machine readability determines your visibility in the AI commerce era.
           </p>
+        </motion.div>
+
+        {/* Platform Objection Callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto mb-16"
+        >
+          <div className="relative p-6 rounded-xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/20">
+            <p className="text-lg font-serif text-foreground mb-2">
+              "Think Shopify handles this for you?"
+            </p>
+            <p className="text-muted-foreground font-sans text-sm leading-relaxed">
+              Your platform covers the basics. But your specific product data, review markup, offer schema, and checkout flow? That's where most sites break. We check what your platform misses.
+            </p>
+          </div>
         </motion.div>
 
         {/* View Toggle - Premium styling */}

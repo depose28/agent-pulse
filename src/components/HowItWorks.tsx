@@ -6,7 +6,7 @@ const steps = [
     number: "01",
     icon: Link,
     title: "Enter your URL",
-    description: "Paste your store URL. That's it.",
+    description: "Paste any website URL. That's it.",
   },
   {
     number: "02",
