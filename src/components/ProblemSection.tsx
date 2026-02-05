@@ -142,87 +142,93 @@ const ProblemSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.3 }}
-                className="agent-view rounded-2xl p-8"
+                className="agent-view rounded-2xl p-6 md:p-8"
               >
                 {/* Agent view - Cold, technical, data-driven */}
-                <div className="grid lg:grid-cols-3 gap-4">
-                  {/* Scan Status */}
-                  <div className="lg:col-span-3 flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10 mb-2">
+                <div className="space-y-4">
+                  {/* Top Bar - Scan Command */}
+                  <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
                     <div className="flex items-center gap-3">
-                      <Bot className="w-5 h-5 text-holo-2" />
-                      <span className="text-sm font-mono text-white/80">
-                        agent.scan("alpine-trail-runner")
-                      </span>
+                      <span className="text-lg">🛒</span>
+                      <code className="text-sm font-mono text-white/90">
+                        agent.scan(<span className="text-emerald-400">"alpine-trail-runner"</span>)
+                      </code>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-score-medium animate-pulse" />
-                      <span className="text-xs font-mono text-score-medium">PARTIAL DATA</span>
+                      <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                      <span className="text-xs font-mono font-medium text-amber-400 tracking-wide">PARTIAL DATA</span>
                     </div>
                   </div>
 
-                  {/* Found Data */}
-                  <div className="bg-white/5 rounded-xl border border-white/10 p-5">
-                    <div className="flex items-center gap-2 mb-4">
-                      <Check className="w-4 h-4 text-score-high" />
-                      <span className="text-xs font-mono text-white/60 uppercase tracking-wider">Found</span>
+                  {/* Three Cards Row */}
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {/* Card 1: FOUND */}
+                    <div className="bg-white/5 rounded-xl border-l-4 border-l-emerald-500/70 border border-white/10 p-5 overflow-hidden">
+                      <div className="flex items-center gap-2 mb-4">
+                        <Check className="w-4 h-4 text-emerald-400" />
+                        <span className="text-xs font-mono font-medium text-emerald-400 uppercase tracking-wider">Found</span>
+                      </div>
+                      <pre className="font-mono text-xs leading-relaxed overflow-x-auto">
+<span className="text-white/50">{"{"}</span>
+{`  `}<span className="text-white/80">"@type"</span><span className="text-white/50">:</span> <span className="text-emerald-300">"Product"</span><span className="text-white/50">,</span>
+{`  `}<span className="text-white/80">"name"</span><span className="text-white/50">:</span> <span className="text-emerald-300">"Alpine Trail Runner GTX"</span><span className="text-white/50">,</span>
+{`  `}<span className="text-white/80">"image"</span><span className="text-white/50">:</span> <span className="text-emerald-300">"/images/alpine-trail..."</span><span className="text-white/50">,</span>
+{`  `}<span className="text-white/80">"description"</span><span className="text-white/50">:</span> <span className="text-emerald-300">"Premium trail..."</span><span className="text-white/50">,</span>
+{`  `}<span className="text-white/80">"brand"</span><span className="text-white/50">:</span> <span className="text-white/50">{"{"}</span>
+{`    `}<span className="text-white/80">"@type"</span><span className="text-white/50">:</span> <span className="text-emerald-300">"Brand"</span><span className="text-white/50">,</span>
+{`    `}<span className="text-white/80">"name"</span><span className="text-white/50">:</span> <span className="text-emerald-300">"SpeedTrail"</span>
+{`  `}<span className="text-white/50">{"}"}</span>
+<span className="text-white/50">{"}"}</span>
+                      </pre>
                     </div>
-                    <pre className="font-mono text-xs text-white/80 overflow-x-auto">
-{`{
-  "@type": "Product",
-  "name": "Alpine Trail...",
-  "image": "✓",
-  "description": "✓"
-}`}
-                    </pre>
+
+                    {/* Card 2: MISSING */}
+                    <div className="bg-rose-500/5 rounded-xl border-l-4 border-l-rose-500/70 border border-rose-500/20 p-5 overflow-hidden">
+                      <div className="flex items-center gap-2 mb-4">
+                        <X className="w-4 h-4 text-rose-400" />
+                        <span className="text-xs font-mono font-medium text-rose-400 uppercase tracking-wider">Missing</span>
+                      </div>
+                      <pre className="font-mono text-xs leading-relaxed overflow-x-auto">
+<span className="text-white/50">{"{"}</span>
+{`  `}<span className="text-rose-300">"offers"</span><span className="text-white/50">:</span> <span className="text-rose-400">null</span><span className="text-white/50">,</span>         <span className="text-amber-400">{"// ⚠"}</span>
+{`  `}<span className="text-rose-300">"price"</span><span className="text-white/50">:</span> <span className="text-rose-400">undefined</span><span className="text-white/50">,</span>    <span className="text-amber-400">{"// ⚠"}</span>
+{`  `}<span className="text-rose-300/70">"priceCurrency"</span><span className="text-white/50">:</span> <span className="text-rose-400/70">null</span><span className="text-white/50">,</span>
+{`  `}<span className="text-rose-300/70">"availability"</span><span className="text-white/50">:</span> <span className="text-rose-400/70">null</span><span className="text-white/50">,</span>
+{`  `}<span className="text-rose-300/70">"review"</span><span className="text-white/50">:</span> <span className="text-rose-400/70">null</span><span className="text-white/50">,</span>
+{`  `}<span className="text-rose-300/70">"aggregateRating"</span><span className="text-white/50">:</span> <span className="text-rose-400/70">null</span>
+<span className="text-white/50">{"}"}</span>
+                      </pre>
+                    </div>
+
+                    {/* Card 3: DECISION */}
+                    <div className="bg-amber-500/5 rounded-xl border-l-4 border-l-amber-500/70 border border-amber-500/20 p-5 overflow-hidden">
+                      <div className="flex items-center gap-2 mb-4">
+                        <AlertTriangle className="w-4 h-4 text-amber-400" />
+                        <span className="text-xs font-mono font-medium text-amber-400 uppercase tracking-wider">Decision</span>
+                      </div>
+                      <pre className="font-mono text-xs leading-relaxed overflow-x-auto">
+<span className="text-white/50">{"{"}</span>
+{`  `}<span className="text-white/80">"action"</span><span className="text-white/50">:</span> <span className="text-rose-400 font-semibold">"SKIP"</span><span className="text-white/50">,</span>
+{`  `}<span className="text-white/80">"reason"</span><span className="text-white/50">:</span> <span className="text-amber-300">"insufficient</span>
+{`    `}<span className="text-amber-300">purchase data"</span><span className="text-white/50">,</span>
+{`  `}<span className="text-white/80">"confidence"</span><span className="text-white/50">:</span> <span className="text-amber-300">0.23</span><span className="text-white/50">,</span>
+{`  `}<span className="text-white/80">"fallback"</span><span className="text-white/50">:</span> <span className="text-rose-400 font-semibold">"competitor"</span>
+<span className="text-white/50">{"}"}</span>
+                      </pre>
+                    </div>
                   </div>
 
-                  {/* Missing Data - The Problem */}
-                  <div className="bg-red-500/10 rounded-xl border border-red-500/30 p-5">
-                    <div className="flex items-center gap-2 mb-4">
-                      <X className="w-4 h-4 text-score-low" />
-                      <span className="text-xs font-mono text-red-400 uppercase tracking-wider">Missing</span>
-                    </div>
-                    <pre className="font-mono text-xs text-red-300/80 overflow-x-auto">
-{`{
-  "offers": null,      // ⚠
-  "price": undefined,  // ⚠
-  "availability": null,
-  "review": null,
-  "aggregateRating": null
-}`}
-                    </pre>
-                  </div>
-
-                  {/* Agent Decision */}
-                  <div className="bg-white/5 rounded-xl border border-white/10 p-5">
-                    <div className="flex items-center gap-2 mb-4">
-                      <AlertTriangle className="w-4 h-4 text-score-medium" />
-                      <span className="text-xs font-mono text-white/60 uppercase tracking-wider">Decision</span>
-                    </div>
-                    <pre className="font-mono text-xs text-white/80 overflow-x-auto">
-{`{
-  "action": "SKIP",
-  "reason": "insufficient
-    purchase data",
-  "confidence": 0.23,
-  "fallback": "competitor"
-}`}
-                    </pre>
-                  </div>
-
-                  {/* Summary Bar */}
-                  <div className="lg:col-span-3 p-4 bg-gradient-to-r from-red-500/10 to-transparent rounded-xl border border-red-500/20 mt-2">
-                    <div className="flex items-center gap-4">
+                  {/* Bottom Summary Bar */}
+                  <div className="p-5 bg-gradient-to-r from-rose-500/15 via-rose-500/10 to-transparent rounded-xl border border-rose-500/25">
+                    <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center">
-                          <span className="text-2xl">😔</span>
-                        </div>
+                        <span className="text-3xl">😞</span>
                       </div>
                       <div>
-                        <p className="text-sm font-sans text-white/90 font-medium">
+                        <p className="text-base font-sans text-white font-medium mb-1">
                           Agent couldn't complete purchase evaluation
                         </p>
-                        <p className="text-xs font-sans text-white/50 mt-0.5">
+                        <p className="text-sm font-sans text-white/60 leading-relaxed">
                           Missing Offer schema, price markup, and availability signals. Customer was sent to a competitor.
                         </p>
                       </div>
