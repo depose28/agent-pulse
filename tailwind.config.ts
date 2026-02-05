@@ -43,8 +43,6 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-          orange: "hsl(var(--accent-orange))",
-          gold: "hsl(var(--accent-gold))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -73,9 +71,19 @@ export default {
           medium: "hsl(var(--score-medium))",
           high: "hsl(var(--score-high))",
         },
-        terminal: {
-          bg: "hsl(var(--terminal-bg))",
-          fg: "hsl(var(--terminal-fg))",
+        dark: {
+          bg: "hsl(var(--dark-bg))",
+          fg: "hsl(var(--dark-fg))",
+          muted: "hsl(var(--dark-muted))",
+          border: "hsl(var(--dark-border))",
+          card: "hsl(var(--dark-card))",
+        },
+        holo: {
+          1: "hsl(var(--holo-1))",
+          2: "hsl(var(--holo-2))",
+          3: "hsl(var(--holo-3))",
+          4: "hsl(var(--holo-4))",
+          5: "hsl(var(--holo-5))",
         },
       },
       borderRadius: {
@@ -84,19 +92,15 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["DM Sans", "sans-serif"],
-        serif: ["Cormorant Garamond", "Georgia", "serif"],
-        mono: ["IBM Plex Mono", "monospace"],
+        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        serif: ["Playfair Display", "Georgia", "serif"],
+        mono: ["JetBrains Mono", "Fira Code", "monospace"],
       },
       fontSize: {
-        "display-xl": ["5.5rem", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
-        "display-lg": ["4.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        "display": ["3.5rem", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
-        base: ["17px", "1.6"],
-      },
-      letterSpacing: {
-        tight: "-0.02em",
-        tighter: "-0.03em",
+        "display-2xl": ["6rem", { lineHeight: "1", letterSpacing: "-0.03em" }],
+        "display-xl": ["5rem", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "display-lg": ["4rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        "display": ["3rem", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
       },
       keyframes: {
         "accordion-down": {
@@ -111,26 +115,21 @@ export default {
           from: { opacity: "0", transform: "translateY(10px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        "slide-in-right": {
-          from: { opacity: "0", transform: "translateX(20px)" },
-          to: { opacity: "1", transform: "translateX(0)" },
+        "holo-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
         },
-        "scale-in": {
-          from: { opacity: "0", transform: "scale(0.95)" },
-          to: { opacity: "1", transform: "scale(1)" },
-        },
-        "score-fill": {
-          from: { strokeDashoffset: "283" },
-          to: { strokeDashoffset: "var(--score-offset)" },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out forwards",
-        "slide-in-right": "slide-in-right 0.5s ease-out forwards",
-        "scale-in": "scale-in 0.3s ease-out forwards",
-        "score-fill": "score-fill 1.5s ease-out forwards",
+        "holo-shift": "holo-shift 8s ease infinite",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },

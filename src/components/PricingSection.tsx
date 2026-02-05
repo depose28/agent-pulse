@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, X, ArrowRight } from "lucide-react";
+import { Check, X, ArrowRight, Sparkles } from "lucide-react";
 
 const tiers = [
   {
@@ -41,34 +41,35 @@ const tiers = [
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-28 relative">
-      {/* Section divider */}
-      <div className="absolute top-0 left-0 right-0 section-divider" />
+    <section id="pricing" className="py-32 relative section-dark overflow-hidden">
+      {/* Grid pattern */}
+      <div className="absolute inset-0 grid-pattern opacity-20" />
+      
+      {/* Holographic orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-holo-2/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="text-center mb-20 max-w-3xl mx-auto"
         >
-          <div className="section-accent mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
-              Pricing
-            </span>
-          </div>
-          <h2 className="text-4xl sm:text-5xl md:text-display font-serif text-foreground mb-6 tracking-tight">
+          <p className="text-sm font-mono text-dark-muted uppercase tracking-widest mb-4">
+            Pricing
+          </p>
+          <h2 className="text-4xl sm:text-5xl lg:text-display font-serif text-dark-fg mb-6 tracking-tight">
             Start free, upgrade when{" "}
             <span className="font-serif-italic">ready</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl font-sans">
+          <p className="text-lg text-dark-muted font-sans">
             No credit card required for your first scan.
           </p>
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {tiers.map((tier, index) => (
             <motion.div
               key={tier.name}
@@ -76,25 +77,24 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className={`relative card-elevated p-8 ${
-                tier.featured ? "border-foreground/30" : ""
-              }`}
+              className={`relative ${tier.featured ? "holo-border-dark glow-holo" : "bg-dark-card border border-dark-border rounded-2xl"} p-8`}
             >
               {/* Featured badge */}
               {tier.featured && (
-                <div className="absolute -top-3 left-6">
-                  <div className="px-3 py-1 bg-foreground text-background rounded-full text-[10px] font-sans font-medium uppercase tracking-wider">
+                <div className="absolute -top-4 left-8">
+                  <div className="inline-flex items-center gap-1.5 px-4 py-1.5 holo-button rounded-full text-xs font-sans font-medium text-dark-fg">
+                    <Sparkles className="w-3 h-3" />
                     Recommended
                   </div>
                 </div>
               )}
 
               {/* Header */}
-              <div className="mb-6">
-                <h3 className="text-2xl font-serif text-foreground mb-2">
+              <div className="mb-6 pt-2">
+                <h3 className="text-2xl font-serif text-dark-fg mb-2">
                   {tier.name}
                 </h3>
-                <p className="text-muted-foreground text-sm font-sans">
+                <p className="text-dark-muted text-sm font-sans">
                   {tier.description}
                 </p>
               </div>
@@ -102,11 +102,11 @@ const PricingSection = () => {
               {/* Price */}
               <div className="mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-serif text-foreground">
+                  <span className="text-5xl font-serif text-dark-fg">
                     {tier.price}
                   </span>
                   {tier.priceNote && (
-                    <span className="text-muted-foreground text-sm font-sans">
+                    <span className="text-dark-muted text-sm font-sans">
                       {tier.priceNote}
                     </span>
                   )}
@@ -115,10 +115,10 @@ const PricingSection = () => {
 
               {/* CTA */}
               <button
-                className={`w-full py-3.5 px-6 rounded-lg font-sans font-medium flex items-center justify-center gap-2 transition-all mb-8 ${
+                className={`w-full py-4 px-6 rounded-xl font-sans font-medium flex items-center justify-center gap-2 transition-all mb-8 ${
                   tier.featured
-                    ? "btn-primary"
-                    : "btn-secondary"
+                    ? "holo-button text-dark-fg"
+                    : "bg-dark-border/50 text-dark-fg hover:bg-dark-border"
                 }`}
               >
                 {tier.cta}
@@ -132,14 +132,14 @@ const PricingSection = () => {
                     key={i}
                     className={`flex items-start gap-3 text-sm font-sans ${
                       feature.included
-                        ? "text-foreground"
-                        : "text-muted-foreground/50"
+                        ? "text-dark-fg"
+                        : "text-dark-muted/40"
                     }`}
                   >
                     {feature.included ? (
                       <Check className="w-4 h-4 text-score-high mt-0.5 shrink-0" />
                     ) : (
-                      <X className="w-4 h-4 text-muted-foreground/30 mt-0.5 shrink-0" />
+                      <X className="w-4 h-4 text-dark-muted/30 mt-0.5 shrink-0" />
                     )}
                     {feature.text}
                   </li>

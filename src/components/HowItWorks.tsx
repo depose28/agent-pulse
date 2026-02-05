@@ -25,34 +25,32 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-28 relative">
-      {/* Section divider */}
-      <div className="absolute top-0 left-0 right-0 section-divider" />
+    <section id="how-it-works" className="py-32 relative section-dark overflow-hidden">
+      {/* Grid pattern */}
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
-      <div className="container mx-auto px-6">
-        {/* Section Header with accent bar */}
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="text-center mb-20 max-w-3xl mx-auto"
         >
-          <div className="section-accent mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
-              How It Works
-            </span>
-          </div>
-          <h2 className="text-4xl sm:text-5xl md:text-display font-serif text-foreground mb-6 tracking-tight">
+          <p className="text-sm font-mono text-dark-muted uppercase tracking-widest mb-4">
+            How It Works
+          </p>
+          <h2 className="text-4xl sm:text-5xl lg:text-display font-serif text-dark-fg mb-6 tracking-tight">
             Three steps to{" "}
             <span className="font-serif-italic">clarity</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl font-sans">
+          <p className="text-lg text-dark-muted font-sans">
             Get actionable insights in under two minutes.
           </p>
         </motion.div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -60,29 +58,29 @@ const HowItWorks = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="relative group"
+              className="relative"
             >
               {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-border" />
+                <div className="hidden lg:block absolute top-16 left-[60%] w-[80%] h-px bg-gradient-to-r from-dark-border to-transparent" />
               )}
 
-              <div className="card-elevated p-8 h-full transition-all hover:border-foreground/20">
+              <div className="holo-border-dark p-8 h-full">
                 {/* Number */}
                 <div className="flex items-center justify-between mb-8">
-                  <span className="text-5xl font-serif text-border">
+                  <span className="text-6xl font-serif text-dark-border/50">
                     {step.number}
                   </span>
-                  <div className="w-11 h-11 rounded-lg bg-surface border border-border flex items-center justify-center">
-                    <step.icon className="w-5 h-5 text-foreground" />
+                  <div className="w-12 h-12 rounded-xl bg-dark-card border border-dark-border flex items-center justify-center">
+                    <step.icon className="w-5 h-5 text-holo-2" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-serif text-foreground mb-3">
+                <h3 className="text-xl font-serif text-dark-fg mb-3">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed font-sans text-sm">
+                <p className="text-dark-muted leading-relaxed font-sans text-sm">
                   {step.description}
                 </p>
               </div>
