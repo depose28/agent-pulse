@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,12 +25,13 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <img 
-              src={logo} 
-              alt="AgentPulse" 
-              className="h-8 w-auto object-contain"
-            />
+          <a href="#" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+              <span className={`text-sm font-serif font-semibold ${scrolled ? "text-foreground" : "text-white"}`}>A</span>
+            </div>
+            <span className={`text-xl font-serif tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}>
+              Agent<span className="font-serif-italic">Pulse</span>
+            </span>
           </a>
 
           {/* Nav Links */}
