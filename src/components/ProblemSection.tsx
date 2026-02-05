@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Bot, ShoppingCart, Star, Check, X, AlertTriangle } from "lucide-react";
+import { User, Bot, Star, Check, X, AlertTriangle } from "lucide-react";
+import sneakerImage from "@/assets/sneaker.png";
 
 const ProblemSection = () => {
   const [viewMode, setViewMode] = useState<"human" | "agent">("human");
@@ -81,13 +82,12 @@ const ProblemSection = () => {
                 <div className="flex flex-col lg:flex-row gap-10">
                   {/* Product Image */}
                   <div className="lg:w-1/2">
-                    <div className="aspect-square bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl flex items-center justify-center border border-amber-100">
-                      <div className="text-center p-8">
-                        <div className="w-40 h-40 bg-gradient-to-br from-amber-200 to-orange-200 rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-inner">
-                          <ShoppingCart className="w-16 h-16 text-amber-600/50" />
-                        </div>
-                        <p className="text-amber-700/60 text-sm font-sans">Premium Product</p>
-                      </div>
+                    <div className="aspect-square bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl flex items-center justify-center border border-amber-100 overflow-hidden">
+                      <img 
+                        src={sneakerImage} 
+                        alt="Alpine Trail Runner GTX" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                   
