@@ -14,6 +14,7 @@ const layers = [
       "Sitemap accessibility",
       "Crawlability signals",
     ],
+    color: "from-holo-1/20 to-transparent",
   },
   {
     name: "TRUST",
@@ -27,6 +28,7 @@ const layers = [
       "Publisher authority",
       "Brand verification",
     ],
+    color: "from-holo-2/20 to-transparent",
   },
   {
     name: "BUY",
@@ -40,43 +42,38 @@ const layers = [
       "Payment protocol readiness",
       "API integration signals",
     ],
+    color: "from-holo-4/20 to-transparent",
   },
 ];
 
 const FrameworkSection = () => {
   return (
-    <section className="py-28 relative">
-      {/* Section divider */}
-      <div className="absolute top-0 left-0 right-0 section-divider" />
-      <div className="absolute inset-0 topo-pattern opacity-40" />
-
+    <section className="py-32 relative bg-background overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="text-center mb-20 max-w-3xl mx-auto"
         >
-          <div className="section-accent mb-4">
-            <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
-              The Framework
-            </span>
-          </div>
-          <h2 className="text-4xl sm:text-5xl md:text-display font-serif text-foreground mb-6 tracking-tight max-w-4xl">
+          <p className="text-sm font-mono text-muted-foreground uppercase tracking-widest mb-4">
+            The Framework
+          </p>
+          <h2 className="text-4xl sm:text-5xl lg:text-display font-serif text-foreground mb-6 tracking-tight">
             Most tools check SEO.
             <br />
-            We check if AI can actually{" "}
-            <span className="font-serif-italic">shop</span> your site.
+            We check if AI can{" "}
+            <span className="font-serif-italic">shop</span>.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl font-sans">
+          <p className="text-lg text-muted-foreground font-sans">
             Our scoring framework evaluates your entire AI commerce journey —
             from discovery to checkout.
           </p>
         </motion.div>
 
         {/* Framework Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {layers.map((layer, index) => (
             <motion.div
               key={layer.name}
@@ -84,50 +81,53 @@ const FrameworkSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="card-elevated p-8 transition-all hover:border-foreground/20"
+              className="holo-border p-8"
             >
+              {/* Gradient accent */}
+              <div className={`absolute top-0 left-0 right-0 h-32 bg-gradient-to-b ${layer.color} rounded-t-lg pointer-events-none`} />
+              
               {/* Header */}
-              <div className="flex items-center justify-between mb-6">
+              <div className="relative flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-surface border border-border flex items-center justify-center">
+                  <div className="w-11 h-11 rounded-xl bg-secondary border border-border flex items-center justify-center">
                     <layer.icon className="w-5 h-5 text-foreground" />
                   </div>
-                  <span className="font-mono text-sm tracking-wider text-foreground">
+                  <span className="font-mono text-sm tracking-wider text-foreground font-medium">
                     {layer.name}
                   </span>
                 </div>
-                <span className="text-xs font-mono text-muted-foreground">
+                <span className="text-xs font-mono text-muted-foreground bg-secondary px-2 py-1 rounded-md">
                   {layer.weight}
                 </span>
               </div>
 
               {/* Question */}
-              <h3 className="text-xl font-serif text-foreground mb-6">
+              <h3 className="relative text-xl font-serif text-foreground mb-6">
                 {layer.question}
               </h3>
 
               {/* Signals */}
-              <ul className="space-y-2.5">
+              <ul className="relative space-y-3">
                 {layer.signals.map((signal, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-2.5 text-sm text-muted-foreground font-sans"
+                    className="flex items-center gap-3 text-sm text-muted-foreground font-sans"
                   >
-                    <div className="w-1 h-1 rounded-full bg-accent-orange" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-holo-2/60" />
                     {signal}
                   </li>
                 ))}
               </ul>
 
-              {/* Code snippet preview */}
-              <div className="mt-6 terminal-block p-4">
+              {/* Code snippet */}
+              <div className="relative mt-6 bg-dark-bg rounded-xl p-4 border border-dark-border">
                 <pre className="text-xs font-mono text-white/70 overflow-x-auto">
                   {layer.name === "FIND" && (
                     <code>
 {`{
   "@type": "Product",
   "name": "...",
-  "sku": "..."
+  "sku": "SKU-001"
 }`}
                     </code>
                   )}
@@ -145,7 +145,7 @@ const FrameworkSection = () => {
 {`{
   "@type": "Offer",
   "price": "129.99",
-  "availability": "..."
+  "availability": "InStock"
 }`}
                     </code>
                   )}

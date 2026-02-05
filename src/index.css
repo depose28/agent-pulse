@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,85 +6,93 @@
 
 @layer base {
   :root {
-    /* AMP-Inspired Warm Light Theme */
-    --background: 50 25% 91%;
-    --foreground: 40 10% 12%;
+    /* Variation D: Premium Light/Dark Hybrid with Holographic Accents */
+    
+    /* Light theme base (used for light sections) */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 10%;
 
-    --card: 50 20% 94%;
-    --card-foreground: 40 10% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
 
-    --popover: 50 20% 94%;
-    --popover-foreground: 40 10% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
 
-    --primary: 40 10% 12%;
-    --primary-foreground: 50 25% 91%;
+    --primary: 240 10% 10%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 50 15% 85%;
-    --secondary-foreground: 40 10% 12%;
+    --secondary: 240 5% 94%;
+    --secondary-foreground: 240 10% 10%;
 
-    --muted: 50 15% 85%;
-    --muted-foreground: 40 10% 45%;
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 5% 45%;
 
-    --accent: 25 85% 55%;
-    --accent-foreground: 50 25% 96%;
+    --accent: 280 60% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 60% 50%;
-    --destructive-foreground: 50 25% 96%;
+    --destructive: 0 55% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 40 15% 80%;
-    --input: 50 15% 88%;
-    --ring: 40 15% 70%;
+    --border: 240 5% 88%;
+    --input: 240 5% 94%;
+    --ring: 280 60% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Score Colors - Sophisticated muted tones */
+    /* Score Colors - Muted and sophisticated */
     --score-low: 0 50% 55%;
-    --score-medium: 38 80% 50%;
-    --score-high: 150 35% 40%;
+    --score-medium: 38 70% 50%;
+    --score-high: 155 45% 42%;
 
-    /* Custom Colors */
-    --surface: 50 18% 88%;
-    --surface-elevated: 50 20% 92%;
+    /* Dark sections */
+    --dark-bg: 240 15% 8%;
+    --dark-fg: 0 0% 96%;
+    --dark-muted: 240 10% 40%;
+    --dark-border: 240 10% 18%;
+    --dark-card: 240 12% 12%;
 
-    /* Accent orange for highlights */
-    --accent-orange: 25 85% 55%;
-    --accent-gold: 42 75% 50%;
-
-    /* Terminal/code block dark */
-    --terminal-bg: 40 15% 15%;
-    --terminal-fg: 50 15% 85%;
+    /* Holographic gradient stops */
+    --holo-1: 220 85% 70%;
+    --holo-2: 280 75% 72%;
+    --holo-3: 320 70% 70%;
+    --holo-4: 40 80% 70%;
+    --holo-5: 180 70% 65%;
 
     /* Sidebar - keeping for compatibility */
-    --sidebar-background: 50 25% 91%;
-    --sidebar-foreground: 40 10% 12%;
-    --sidebar-primary: 40 10% 12%;
-    --sidebar-primary-foreground: 50 25% 91%;
-    --sidebar-accent: 50 15% 85%;
-    --sidebar-accent-foreground: 40 10% 12%;
-    --sidebar-border: 40 15% 80%;
-    --sidebar-ring: 40 15% 70%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 240 10% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 94%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 240 5% 88%;
+    --sidebar-ring: 280 60% 65%;
+
+    /* Surface colors */
+    --surface: 240 5% 96%;
+    --surface-elevated: 0 0% 100%;
   }
 
   .dark {
-    --background: 40 15% 8%;
-    --foreground: 50 15% 90%;
-    --card: 40 12% 12%;
-    --card-foreground: 50 15% 90%;
-    --popover: 40 12% 12%;
-    --popover-foreground: 50 15% 90%;
-    --primary: 50 15% 90%;
-    --primary-foreground: 40 15% 8%;
-    --secondary: 40 10% 18%;
-    --secondary-foreground: 50 15% 90%;
-    --muted: 40 10% 18%;
-    --muted-foreground: 50 10% 55%;
-    --accent: 25 85% 55%;
-    --accent-foreground: 50 25% 96%;
-    --destructive: 0 50% 45%;
-    --destructive-foreground: 50 15% 90%;
-    --border: 40 10% 20%;
-    --input: 40 10% 15%;
-    --ring: 40 10% 30%;
+    --background: 240 15% 8%;
+    --foreground: 0 0% 96%;
+    --card: 240 12% 12%;
+    --card-foreground: 0 0% 96%;
+    --popover: 240 12% 12%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 240 15% 8%;
+    --secondary: 240 10% 16%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 240 10% 16%;
+    --muted-foreground: 240 5% 55%;
+    --accent: 280 60% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 240 10% 18%;
+    --input: 240 10% 14%;
+    --ring: 280 60% 65%;
   }
 }
 
@@ -99,110 +107,189 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
   }
 
-  /* Premium Editorial Typography - Cormorant Garamond */
+  /* Premium Serif Typography */
   .font-serif {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 500;
   }
 
   .font-serif-italic {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-style: italic;
     font-weight: 500;
   }
 
   .font-mono {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 500;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer utilities {
-  /* Section accent line - orange vertical bar like AMP */
-  .section-accent {
-    position: relative;
-    padding-left: 1.25rem;
+  /* Dark section styling */
+  .section-dark {
+    background: hsl(var(--dark-bg));
+    color: hsl(var(--dark-fg));
   }
 
-  .section-accent::before {
+  .section-dark .text-muted-foreground {
+    color: hsl(var(--dark-muted));
+  }
+
+  /* Premium Holographic Border Effect */
+  .holo-border {
+    position: relative;
+    background: hsl(var(--card));
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .holo-border::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: hsl(var(--accent-orange));
-    border-radius: 2px;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--holo-1) / 0.6),
+      hsl(var(--holo-2) / 0.5),
+      hsl(var(--holo-3) / 0.4),
+      hsl(var(--holo-4) / 0.5),
+      hsl(var(--holo-5) / 0.6),
+      hsl(var(--holo-1) / 0.6)
+    );
+    background-size: 300% 300%;
+    animation: holo-shift 8s ease infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 
-  /* Subtle topographic wave pattern background */
-  .topo-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cpath fill='none' stroke='%23a09080' stroke-opacity='0.08' stroke-width='1' d='M0 50 Q100 30 200 50 T400 50 M0 100 Q100 80 200 100 T400 100 M0 150 Q100 130 200 150 T400 150 M0 200 Q100 180 200 200 T400 200 M0 250 Q100 230 200 250 T400 250 M0 300 Q100 280 200 300 T400 300 M0 350 Q100 330 200 350 T400 350'/%3E%3C/svg%3E");
-    background-size: 400px 400px;
+  .holo-border:hover::before {
+    animation-duration: 3s;
   }
 
-  /* Card with subtle border */
-  .card-elevated {
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
+  /* Dark variant holographic border */
+  .holo-border-dark {
+    position: relative;
+    background: hsl(var(--dark-card));
     border-radius: var(--radius);
+    overflow: hidden;
   }
 
-  /* Terminal/code block styling - dark on light */
-  .terminal-block {
-    background: hsl(var(--terminal-bg));
-    color: hsl(var(--terminal-fg));
-    border-radius: calc(var(--radius) + 2px);
-    font-family: 'IBM Plex Mono', monospace;
+  .holo-border-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--holo-1) / 0.7),
+      hsl(var(--holo-2) / 0.6),
+      hsl(var(--holo-3) / 0.5),
+      hsl(var(--holo-4) / 0.6),
+      hsl(var(--holo-5) / 0.7),
+      hsl(var(--holo-1) / 0.7)
+    );
+    background-size: 300% 300%;
+    animation: holo-shift 8s ease infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 
-  /* Primary CTA button - solid dark */
-  .btn-primary {
+  @keyframes holo-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Holographic CTA Button */
+  .holo-button {
+    position: relative;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--holo-1) / 0.15),
+      hsl(var(--holo-2) / 0.12),
+      hsl(var(--holo-3) / 0.1),
+      hsl(var(--holo-4) / 0.12),
+      hsl(var(--holo-5) / 0.15)
+    );
+    background-size: 200% 200%;
+    border: 1px solid hsl(var(--holo-2) / 0.3);
+    transition: all 0.3s ease;
+    animation: holo-shift 6s ease infinite;
+  }
+
+  .holo-button:hover {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--holo-1) / 0.25),
+      hsl(var(--holo-2) / 0.2),
+      hsl(var(--holo-3) / 0.18),
+      hsl(var(--holo-4) / 0.2),
+      hsl(var(--holo-5) / 0.25)
+    );
+    background-size: 200% 200%;
+    border-color: hsl(var(--holo-2) / 0.5);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px -10px hsl(var(--holo-2) / 0.4);
+  }
+
+  /* Solid Primary Button */
+  .btn-solid {
     background: hsl(var(--foreground));
     color: hsl(var(--background));
     font-weight: 500;
     transition: all 0.2s ease;
   }
 
-  .btn-primary:hover {
+  .btn-solid:hover {
     opacity: 0.9;
     transform: translateY(-1px);
   }
 
-  /* Secondary button - outline */
-  .btn-secondary {
+  /* Ghost Button */
+  .btn-ghost {
     background: transparent;
-    color: hsl(var(--foreground));
     border: 1px solid hsl(var(--border));
-    font-weight: 500;
+    color: hsl(var(--foreground));
     transition: all 0.2s ease;
   }
 
-  .btn-secondary:hover {
+  .btn-ghost:hover {
     border-color: hsl(var(--foreground));
     background: hsl(var(--foreground) / 0.05);
   }
 
-  /* Section divider - subtle line */
+  /* Holographic Score Ring */
+  .score-ring-gradient {
+    stroke: url(#scoreHoloGradient);
+  }
+
+  /* Section Divider */
   .section-divider {
     height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      hsl(var(--border)),
-      hsl(var(--border)),
-      transparent
-    );
+    background: hsl(var(--border));
   }
 
   /* Score colors */
@@ -242,33 +329,42 @@
     background-color: hsl(var(--score-high));
   }
 
-  /* Text accent orange */
-  .text-accent-orange {
-    color: hsl(var(--accent-orange));
+  /* Human View Styling - Warm, inviting, light */
+  .human-view {
+    background: linear-gradient(135deg, hsl(45 30% 97%), hsl(30 20% 96%));
+    border: 1px solid hsl(40 20% 88%);
   }
 
-  /* Code syntax highlighting for light theme */
-  .syntax-string {
-    color: hsl(150 50% 35%);
+  /* Agent View Styling - Cold, technical, dark */
+  .agent-view {
+    background: hsl(var(--dark-bg));
+    border: 1px solid hsl(var(--dark-border));
   }
 
-  .syntax-number {
-    color: hsl(25 85% 45%);
+  /* Subtle glow on dark backgrounds */
+  .glow-holo {
+    box-shadow: 
+      0 0 60px -20px hsl(var(--holo-1) / 0.2),
+      0 0 100px -30px hsl(var(--holo-2) / 0.15);
   }
 
-  .syntax-key {
-    color: hsl(40 10% 45%);
+  /* Grid pattern for dark sections */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(var(--dark-border) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--dark-border) / 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
   }
 }
 
-/* Custom scrollbar - subtle */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+  background: hsl(var(--muted));
 }
 
 ::-webkit-scrollbar-thumb {
@@ -277,11 +373,11 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground) / 0.4);
+  background: hsl(var(--muted-foreground) / 0.5);
 }
 
-/* Selection styling */
+/* Selection styling with holographic feel */
 ::selection {
-  background: hsl(var(--accent-orange) / 0.2);
+  background: hsl(var(--holo-2) / 0.3);
   color: hsl(var(--foreground));
 }
