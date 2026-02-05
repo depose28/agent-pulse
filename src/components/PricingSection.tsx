@@ -69,7 +69,7 @@ const PricingSection = () => {
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto pt-6">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {tiers.map((tier, index) => (
             <motion.div
               key={tier.name}
@@ -79,9 +79,9 @@ const PricingSection = () => {
               transition={{ delay: index * 0.15 }}
               className={`relative ${tier.featured ? "holo-border-dark glow-holo" : "bg-dark-card border border-dark-border rounded-2xl"} p-8`}
             >
-              {/* Featured badge */}
+              {/* Featured badge - positioned inside the card */}
               {tier.featured && (
-                <div className="absolute -top-3 left-8 z-10">
+                <div className="mb-6">
                   <div className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-foreground rounded-full text-xs font-sans font-medium shadow-lg">
                     <Sparkles className="w-3 h-3 text-holo-2" />
                     Recommended
@@ -90,7 +90,7 @@ const PricingSection = () => {
               )}
 
               {/* Header */}
-              <div className="mb-6 pt-2">
+              <div className={`mb-6 ${!tier.featured ? 'pt-2' : ''}`}>
                 <h3 className="text-2xl font-serif text-dark-fg mb-2">
                   {tier.name}
                 </h3>
