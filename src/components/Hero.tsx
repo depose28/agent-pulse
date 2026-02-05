@@ -65,24 +65,24 @@ const Hero = () => {
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                     placeholder="Enter your website URL"
-                    className="w-full px-5 py-4 bg-dark-card border border-dark-border rounded-xl text-dark-fg placeholder:text-dark-muted/60 focus:outline-none focus:border-holo-2/50 transition-all font-sans"
+                    className="w-full px-5 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-xl text-white placeholder:text-white/50 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all font-sans text-lg"
                     required
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isScanning}
-                  className="group px-6 py-4 holo-button rounded-xl font-sans font-medium text-foreground transition-all flex items-center justify-center gap-2"
+                  className="group px-8 py-4 bg-white text-dark-bg rounded-xl font-sans font-semibold text-lg transition-all flex items-center justify-center gap-2 hover:bg-white/90 hover:scale-[1.02] shadow-xl shadow-white/10"
                 >
                   {isScanning ? (
                     <>
-                      <div className="w-4 h-4 border-2 border-foreground/30 border-t-foreground rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-dark-bg/30 border-t-dark-bg rounded-full animate-spin" />
                       <span>Scanning...</span>
                     </>
                   ) : (
                     <>
                       <span>Get My Score</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                     </>
                   )}
                 </button>
