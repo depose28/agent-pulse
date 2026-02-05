@@ -14,9 +14,6 @@ const layers = [
       "Sitemap accessibility",
       "Crawlability signals",
     ],
-    colorClass: "text-primary",
-    bgClass: "bg-primary/10",
-    borderClass: "border-primary/20 hover:border-primary/40",
   },
   {
     name: "TRUST",
@@ -30,9 +27,6 @@ const layers = [
       "Publisher authority",
       "Brand verification",
     ],
-    colorClass: "text-score-medium",
-    bgClass: "bg-score-medium/10",
-    borderClass: "border-score-medium/20 hover:border-score-medium/40",
   },
   {
     name: "BUY",
@@ -46,16 +40,15 @@ const layers = [
       "Payment protocol readiness",
       "API integration signals",
     ],
-    colorClass: "text-score-high",
-    bgClass: "bg-score-high/10",
-    borderClass: "border-score-high/20 hover:border-score-high/40",
   },
 ];
 
 const FrameworkSection = () => {
   return (
-    <section className="py-24 relative">
-      <div className="absolute inset-0 dot-pattern opacity-20" />
+    <section className="py-28 relative">
+      {/* Holographic divider at top */}
+      <div className="absolute top-0 left-0 right-0 holo-divider" />
+      <div className="absolute inset-0 dot-pattern opacity-10" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -65,14 +58,14 @@ const FrameworkSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground mb-6 tracking-tight">
             Most tools check SEO.
             <br />
             We check if AI can actually{" "}
-            <span className="font-serif italic text-primary">shop</span> your
+            <span className="font-serif-italic">shop</span> your
             site.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">
             Our scoring framework evaluates your entire AI commerce journey —
             from discovery to checkout.
           </p>
@@ -87,46 +80,44 @@ const FrameworkSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className={`bg-card border rounded-2xl p-8 transition-all ${layer.borderClass}`}
+              className="holo-border rounded-xl p-8 bg-card transition-all"
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div
-                    className={`w-10 h-10 rounded-lg ${layer.bgClass} flex items-center justify-center`}
-                  >
-                    <layer.icon className={`w-5 h-5 ${layer.colorClass}`} />
+                  <div className="w-10 h-10 rounded-lg bg-surface border border-border/30 flex items-center justify-center">
+                    <layer.icon className="w-5 h-5 text-muted-foreground" />
                   </div>
-                  <span className={`font-mono font-bold text-lg ${layer.colorClass}`}>
+                  <span className="font-mono text-sm tracking-wider text-foreground">
                     {layer.name}
                   </span>
                 </div>
-                <span className="text-sm font-mono text-muted-foreground">
+                <span className="text-xs font-mono text-muted-foreground/60">
                   {layer.weight}
                 </span>
               </div>
 
               {/* Question */}
-              <h3 className="text-lg font-semibold text-foreground mb-6">
+              <h3 className="text-lg font-serif text-foreground mb-6">
                 {layer.question}
               </h3>
 
               {/* Signals */}
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {layer.signals.map((signal, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                    className="flex items-center gap-2.5 text-sm text-muted-foreground font-sans"
                   >
-                    <div className={`w-1.5 h-1.5 rounded-full ${layer.colorClass} bg-current`} />
+                    <div className="w-1 h-1 rounded-full bg-muted-foreground/40" />
                     {signal}
                   </li>
                 ))}
               </ul>
 
               {/* Code snippet preview */}
-              <div className="mt-6 bg-surface rounded-lg p-4 border border-border">
-                <pre className="text-xs font-mono text-muted-foreground overflow-x-auto">
+              <div className="mt-6 bg-surface rounded-lg p-4 border border-border/30">
+                <pre className="text-xs font-mono text-muted-foreground/70 overflow-x-auto">
                   {layer.name === "FIND" && (
                     <code>
 {`{

@@ -36,7 +36,10 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-24 relative">
+    <section id="faq" className="py-28 relative">
+      {/* Holographic divider at top */}
+      <div className="absolute top-0 left-0 right-0 holo-divider" />
+
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -45,9 +48,9 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground mb-6 tracking-tight">
             Frequently asked{" "}
-            <span className="font-serif italic text-primary">questions</span>
+            <span className="font-serif-italic">questions</span>
           </h2>
         </motion.div>
 
@@ -58,17 +61,17 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto"
         >
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-primary/30"
+                className="holo-border rounded-lg px-6 bg-card data-[state=open]:glow-subtle"
               >
-                <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-5">
+                <AccordionTrigger className="text-left text-foreground hover:text-foreground hover:no-underline py-5 font-serif text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5">
+                <AccordionContent className="text-muted-foreground pb-5 font-sans text-sm leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

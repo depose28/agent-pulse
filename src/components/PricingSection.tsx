@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, X, ArrowRight, Sparkles } from "lucide-react";
+import { Check, X, ArrowRight } from "lucide-react";
 
 const tiers = [
   {
@@ -41,7 +41,10 @@ const tiers = [
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-24 relative">
+    <section id="pricing" className="py-28 relative">
+      {/* Holographic divider at top */}
+      <div className="absolute top-0 left-0 right-0 holo-divider" />
+
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -50,16 +53,16 @@ const PricingSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-foreground mb-6 tracking-tight">
             Start free, upgrade when you're ready
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto font-sans">
             No credit card required for your first scan.
           </p>
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {tiers.map((tier, index) => (
             <motion.div
               key={tier.name}
@@ -67,28 +70,25 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className={`relative bg-card border rounded-2xl p-8 ${
-                tier.featured
-                  ? "border-primary/50 shadow-lg shadow-primary/10"
-                  : "border-border"
+              className={`relative holo-border rounded-xl p-8 bg-card ${
+                tier.featured ? "glow-subtle" : ""
               }`}
             >
               {/* Featured badge */}
               {tier.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <div className="flex items-center gap-1.5 px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs font-medium">
-                    <Sparkles className="w-3 h-3" />
-                    Most Popular
+                  <div className="px-3 py-1 holo-button rounded-full text-[10px] font-sans font-medium uppercase tracking-wider text-foreground">
+                    Recommended
                   </div>
                 </div>
               )}
 
               {/* Header */}
               <div className="mb-6">
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-xl font-serif text-foreground mb-2">
                   {tier.name}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm font-sans">
                   {tier.description}
                 </p>
               </div>
@@ -96,11 +96,11 @@ const PricingSection = () => {
               {/* Price */}
               <div className="mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-foreground">
+                  <span className="text-4xl font-serif text-foreground">
                     {tier.price}
                   </span>
                   {tier.priceNote && (
-                    <span className="text-muted-foreground text-sm">
+                    <span className="text-muted-foreground text-sm font-sans">
                       {tier.priceNote}
                     </span>
                   )}
@@ -109,10 +109,10 @@ const PricingSection = () => {
 
               {/* CTA */}
               <button
-                className={`w-full py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all mb-8 ${
+                className={`w-full py-3 px-6 rounded-lg font-sans font-medium flex items-center justify-center gap-2 transition-all mb-8 ${
                   tier.featured
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90 glow-primary-sm"
-                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                    ? "holo-button text-foreground"
+                    : "bg-surface border border-border/50 text-foreground hover:border-border"
                 }`}
               >
                 {tier.cta}
@@ -124,10 +124,10 @@ const PricingSection = () => {
                 {tier.features.map((feature, i) => (
                   <li
                     key={i}
-                    className={`flex items-start gap-3 text-sm ${
+                    className={`flex items-start gap-3 text-sm font-sans ${
                       feature.included
-                        ? "text-foreground"
-                        : "text-muted-foreground/50"
+                        ? "text-foreground/90"
+                        : "text-muted-foreground/40"
                     }`}
                   >
                     {feature.included ? (
