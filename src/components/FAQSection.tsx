@@ -1,0 +1,83 @@
+import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    question: "What is an AI Commerce Score?",
+    answer:
+      "The AI Commerce Score is a 0-100 rating that measures how well your e-commerce site is optimized for AI shopping agents. It evaluates structured data, schema markup, and protocol readiness across three layers: Find (discovery), Trust (verification), and Buy (purchase completion).",
+  },
+  {
+    question: 'What does "AI shopping agent" mean?',
+    answer:
+      "AI shopping agents are automated systems that help users discover and purchase products. Examples include ChatGPT plugins, Perplexity Shopping, Google Shopping Graph, and emerging AI commerce protocols. These agents read and interpret your site's structured data to understand your products.",
+  },
+  {
+    question: "How is this different from an SEO audit?",
+    answer:
+      "Traditional SEO audits focus on search engine visibility for humans. AgentPulse specifically analyzes the machine-readable signals that AI agents use — Schema.org markup, JSON-LD, Open Graph, and commerce protocol readiness. We check if AI can actually shop your site, not just find it.",
+  },
+  {
+    question: "How long does a scan take?",
+    answer:
+      "A Pulse Check (free tier) typically completes in under 60 seconds. A Deep Scan analyzes more pages and provides comprehensive results, usually completing within 2-5 minutes depending on your site size.",
+  },
+  {
+    question: "Is my data secure?",
+    answer:
+      "Yes. We only access publicly available pages on your website — the same pages any visitor or search engine would see. We don't store your full page content, only the structured data analysis results. All data is encrypted in transit and at rest.",
+  },
+];
+
+const FAQSection = () => {
+  return (
+    <section id="faq" className="py-24 relative">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Frequently asked{" "}
+            <span className="font-serif italic text-primary">questions</span>
+          </h2>
+        </motion.div>
+
+        {/* FAQ Accordion */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto"
+        >
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-primary/30"
+              >
+                <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-5">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-5">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default FAQSection;
