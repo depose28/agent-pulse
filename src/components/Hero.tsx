@@ -45,7 +45,7 @@ const Hero = () => {
 
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-display-xl font-serif text-dark-fg mb-6 leading-[1.05]">
-              Is your store{" "}
+              Is your site{" "}
               <span className="font-serif-italic text-transparent bg-clip-text bg-gradient-to-r from-holo-1 via-holo-2 to-holo-3">
                 invisible
               </span>{" "}
@@ -53,7 +53,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg text-dark-muted mb-10 max-w-lg font-sans">
-              AI shopping agents are the new storefront. Find out if they can discover, trust, and buy from your site.
+              Get your AI Commerce Score in 60 seconds. For any site where AI agents discover, evaluate, or buy. Free.
             </p>
 
             {/* URL Input */}
@@ -90,9 +90,26 @@ const Hero = () => {
             </form>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap items-center gap-4 text-xs text-dark-muted font-sans">
+            <div className="flex flex-wrap items-center gap-4 text-xs text-dark-muted font-sans mb-8">
               <span>✓ No credit card required</span>
               <span>✓ Results in 60 seconds</span>
+            </div>
+
+            {/* Works with bar */}
+            <div className="border-t border-white/10 pt-6">
+              <p className="text-xs text-dark-muted/60 uppercase tracking-widest mb-3 font-mono">
+                Works with any platform
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                {["Shopify", "WooCommerce", "Magento", "Squarespace", "BigCommerce", "Custom builds"].map((platform) => (
+                  <span
+                    key={platform}
+                    className="px-3 py-1.5 text-xs font-sans text-dark-muted/70 bg-white/5 rounded-lg border border-white/10"
+                  >
+                    {platform}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
 
