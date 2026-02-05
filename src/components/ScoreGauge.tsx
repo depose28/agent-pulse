@@ -90,11 +90,15 @@ const ScoreGauge = ({ score, size = 100, showLabel = true }: ScoreGaugeProps) =>
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           <span
-            className="font-serif text-dark-fg tabular-nums"
+            className="font-serif text-dark-fg tabular-nums text-center"
             style={{ 
               fontSize: size * 0.32,
               lineHeight: 1,
               fontWeight: 500,
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             {displayScore}
