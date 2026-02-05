@@ -72,11 +72,11 @@ const Hero = () => {
                 <button
                   type="submit"
                   disabled={isScanning}
-                  className="group px-8 py-4 bg-white text-dark-bg rounded-xl font-sans font-semibold text-lg transition-all flex items-center justify-center gap-2 hover:bg-white/90 hover:scale-[1.02] shadow-xl shadow-white/10"
+                  className="group px-8 py-4 holo-cta rounded-xl font-sans text-lg transition-all flex items-center justify-center gap-2"
                 >
                   {isScanning ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-dark-bg/30 border-t-dark-bg rounded-full animate-spin" />
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                       <span>Scanning...</span>
                     </>
                   ) : (
