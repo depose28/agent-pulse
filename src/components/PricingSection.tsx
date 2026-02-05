@@ -21,7 +21,7 @@ const tiers = [
   },
   {
     name: "Deep Scan",
-    price: "$49",
+    price: "€149",
     priceNote: "one-time",
     description: "Complete analysis with actionable fix list",
     cta: "Get Deep Scan",
