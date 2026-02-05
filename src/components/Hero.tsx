@@ -115,81 +115,108 @@ const Hero = () => {
 
           {/* Right: Score Preview Card - The Visual Centerpiece */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
             className="relative"
           >
-            <div className="holo-border-dark rounded-2xl p-8 glow-holo">
+            {/* Subtle glow behind card */}
+            <div className="absolute -inset-4 bg-gradient-to-br from-holo-1/20 via-holo-2/10 to-holo-3/20 rounded-3xl blur-2xl opacity-50" />
+            
+            <div className="relative holo-border-dark rounded-2xl p-8 lg:p-10 glow-holo backdrop-blur-sm">
               {/* Card Header */}
-              <div className="flex items-center justify-between mb-8 pb-6 border-b border-dark-border">
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                className="flex items-start justify-between mb-10"
+              >
                 <div>
-                  <p className="text-xs font-mono text-dark-muted uppercase tracking-widest mb-1">
+                  <p className="text-[10px] font-mono text-dark-muted uppercase tracking-[0.2em] mb-2">
                     AI Commerce Score™
                   </p>
-                  <p className="text-sm text-dark-fg font-sans">
+                  <p className="text-lg text-dark-fg font-sans font-medium">
                     example-store.com
                   </p>
                 </div>
-                <ScoreGauge score={73} size={90} />
-              </div>
+                <ScoreGauge score={73} size={110} />
+              </motion.div>
+
+              {/* Divider */}
+              <div className="h-px bg-gradient-to-r from-transparent via-dark-border to-transparent mb-8" />
 
               {/* Layer Breakdown */}
-              <div className="space-y-5">
+              <div className="space-y-6">
                 {[
-                  { name: "FIND", score: 82, description: "Discoverability" },
-                  { name: "TRUST", score: 65, description: "Verification" },
-                  { name: "BUY", score: 71, description: "Purchase Ready" },
+                  { name: "FIND", score: 82, color: "bg-score-high" },
+                  { name: "TRUST", score: 65, color: "bg-score-medium" },
+                  { name: "BUY", score: 71, color: "bg-score-high" },
                 ].map((layer, index) => (
                   <motion.div
                     key={layer.name}
-                    initial={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 + index * 0.1 }}
-                    className="flex items-center gap-4"
+                    transition={{ delay: 0.8 + index * 0.15, duration: 0.5 }}
+                    className="flex items-center gap-5"
                   >
-                    <div className="w-16">
-                      <span className="text-xs font-mono text-dark-muted tracking-wider">
+                    <div className="w-14 shrink-0">
+                      <span className="text-xs font-mono text-dark-muted tracking-widest">
                         {layer.name}
                       </span>
                     </div>
                     <div className="flex-1">
-                      <div className="h-2 bg-dark-border rounded-full overflow-hidden">
+                      <div className="h-2.5 bg-dark-border/50 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${layer.score}%` }}
-                          transition={{ delay: 0.8 + index * 0.1, duration: 0.8 }}
-                          className={`h-full rounded-full ${
-                            layer.score >= 70 ? "bg-score-high" : layer.score >= 40 ? "bg-score-medium" : "bg-score-low"
-                          }`}
+                          transition={{ delay: 1 + index * 0.15, duration: 1, ease: "easeOut" }}
+                          className={`h-full rounded-full ${layer.color}`}
                         />
                       </div>
                     </div>
-                    <span className="text-sm font-mono text-dark-fg w-8 text-right">
+                    <motion.span 
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1.2 + index * 0.15, duration: 0.4 }}
+                      className="text-base font-mono text-dark-fg w-8 text-right tabular-nums"
+                    >
                       {layer.score}
-                    </span>
+                    </motion.span>
                   </motion.div>
                 ))}
               </div>
 
+              {/* Divider */}
+              <div className="h-px bg-gradient-to-r from-transparent via-dark-border to-transparent my-8" />
+
               {/* Issues Preview */}
-              <div className="mt-8 pt-6 border-t border-dark-border">
-                <p className="text-xs font-mono text-dark-muted uppercase tracking-wider mb-3">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.4, duration: 0.5 }}
+              >
+                <p className="text-[10px] font-mono text-dark-muted uppercase tracking-[0.2em] mb-4">
                   Top Issues
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {[
                     "Missing Product schema on 12 pages",
                     "Incomplete Offer markup",
                     "No Review aggregation found",
                   ].map((issue, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-dark-fg/80 font-sans">
-                      <div className="w-1.5 h-1.5 rounded-full bg-score-medium" />
+                    <motion.div 
+                      key={i} 
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.5 + i * 0.1, duration: 0.4 }}
+                      className="flex items-center gap-3 text-sm text-dark-fg/80 font-sans"
+                    >
+                      <div className="w-2 h-2 rounded-full bg-score-medium shrink-0" />
                       {issue}
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
