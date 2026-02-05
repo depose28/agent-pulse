@@ -68,7 +68,7 @@ const HowItWorks = () => {
               <div className="holo-border-dark p-8 h-full">
                 {/* Number */}
                 <div className="flex items-center justify-between mb-8">
-                  <span className="text-6xl font-serif text-dark-border/50">
+                  <span className="text-6xl font-serif text-transparent bg-clip-text bg-gradient-to-br from-holo-1 via-holo-2 to-holo-3 opacity-60">
                     {step.number}
                   </span>
                   <div className="w-12 h-12 rounded-xl bg-dark-card border border-dark-border flex items-center justify-center">

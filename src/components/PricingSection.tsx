@@ -81,9 +81,9 @@ const PricingSection = () => {
             >
               {/* Featured badge */}
               {tier.featured && (
-                <div className="absolute -top-4 left-8">
-                  <div className="inline-flex items-center gap-1.5 px-4 py-1.5 holo-button rounded-full text-xs font-sans font-medium text-dark-fg">
-                    <Sparkles className="w-3 h-3" />
+                <div className="absolute -top-3 left-8 z-10">
+                  <div className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-foreground rounded-full text-xs font-sans font-medium shadow-lg">
+                    <Sparkles className="w-3 h-3 text-holo-2" />
                     Recommended
                   </div>
                 </div>

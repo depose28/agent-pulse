@@ -55,7 +55,7 @@ const CTASection = () => {
               </div>
               <button
                 type="submit"
-                className="group px-8 py-4 holo-button rounded-xl font-sans font-medium text-dark-fg transition-all flex items-center justify-center gap-2"
+                className="group px-8 py-4 bg-white text-foreground rounded-xl font-sans font-medium transition-all flex items-center justify-center gap-2 hover:bg-white/90 shadow-lg"
               >
                 Get My Score
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
