@@ -37,10 +37,10 @@ const ProblemSection = () => {
         >
           <div className="relative p-6 rounded-xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/20">
             <p className="text-lg font-serif text-foreground mb-2">
-              "Think Shopify handles this for you?"
+              "Think your platform handles this?"
             </p>
             <p className="text-muted-foreground font-sans text-sm leading-relaxed">
-              Your platform covers the basics. But your specific product data, review markup, offer schema, and checkout flow? That's where most sites break. We check what your platform misses.
+              Shopify, WooCommerce, and others cover the basics. But your specific product data, review markup, and offer schema? That's where most sites break. We check what your platform misses.
             </p>
           </div>
         </motion.div>

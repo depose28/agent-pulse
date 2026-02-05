@@ -53,7 +53,7 @@ const Hero = () => {
             </h1>
 
             <p className="text-lg text-dark-muted mb-10 max-w-lg font-sans">
-              Get your AI Commerce Score in 60 seconds. For any site where AI agents discover, evaluate, or buy. Free.
+              We scanned 500 e-commerce sites. The average score was 34. What's yours?
             </p>
 
             {/* URL Input */}
@@ -90,27 +90,18 @@ const Hero = () => {
             </form>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap items-center gap-4 text-xs text-dark-muted font-sans mb-8">
+            <div className="flex flex-wrap items-center gap-4 text-xs text-dark-muted font-sans mb-6">
               <span>✓ No credit card required</span>
-              <span>✓ Results in 60 seconds</span>
+              <span>✓ Results in under 2 minutes</span>
             </div>
 
             {/* Works with bar */}
-            <div className="border-t border-white/10 pt-6">
-              <p className="text-xs text-dark-muted/60 uppercase tracking-widest mb-3 font-mono">
-                Works with any platform
+            <div className="mb-8">
+              <p className="text-xs text-dark-muted/60 mb-2 font-sans">
+                Works with any platform: <span className="text-dark-muted/80">Shopify · WooCommerce · Magento · Squarespace · BigCommerce · Custom builds</span>
               </p>
-              <div className="flex flex-wrap items-center gap-3">
-                {["Shopify", "WooCommerce", "Magento", "Squarespace", "BigCommerce", "Custom builds"].map((platform) => (
-                  <span
-                    key={platform}
-                    className="px-3 py-1.5 text-xs font-sans text-dark-muted/70 bg-white/5 rounded-lg border border-white/10"
-                  >
-                    {platform}
-                  </span>
-                ))}
-              </div>
             </div>
+
           </motion.div>
 
           {/* Right: Score Preview Card - The Visual Centerpiece */}
@@ -136,7 +127,7 @@ const Hero = () => {
                     AI Commerce Score™
                   </p>
                   <p className="text-lg text-dark-fg font-sans font-medium">
-                    example-store.com
+                    example-site.com
                   </p>
                 </div>
                 <ScoreGauge score={73} size={110} />

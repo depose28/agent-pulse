@@ -23,6 +23,11 @@ const faqs = [
       "No. AgentPulse works for any website where AI agents might discover, evaluate, or transact — online stores, service businesses, marketplaces, SaaS pricing pages, booking sites, and more. If an AI agent can interact with your site, we can score it.",
   },
   {
+    question: "Is this really free?",
+    answer:
+      "Yes. The full scan, your score, the fix list, and your shareable badge — all free. We recommend tools that can help you fix issues, and some of those are affiliate links. That's how we keep the lights on.",
+  },
+  {
     question: "How is this different from an SEO audit?",
     answer:
       "Traditional SEO audits focus on search engine visibility for humans. AgentPulse specifically analyzes the machine-readable signals that AI agents use — Schema.org markup, JSON-LD, Open Graph, and commerce protocol readiness. We check if AI can actually interact with your site, not just find it.",
@@ -30,7 +35,7 @@ const faqs = [
   {
     question: "How long does a scan take?",
     answer:
-      "A Pulse Check (free tier) typically completes in under 60 seconds. A Deep Scan analyzes more pages and provides comprehensive results, usually completing within 2-5 minutes depending on your site size.",
+      "A full scan typically completes in under 2 minutes. Results are delivered immediately in your browser and also sent to your email.",
   },
   {
     question: "Is my data secure?",
