@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { User, Bot, Star, Check, X, AlertTriangle } from "lucide-react";
-import sneakerImage from "@/assets/sneaker.png";
+import trailRunnerImage from "@/assets/trail-runner.png";
 
 const ProblemSection = () => {
   const [viewMode, setViewMode] = useState<"human" | "agent">("human");
@@ -82,11 +82,11 @@ const ProblemSection = () => {
                 <div className="flex flex-col lg:flex-row gap-10">
                   {/* Product Image */}
                   <div className="lg:w-1/2">
-                    <div className="aspect-square bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl flex items-center justify-center border border-amber-100 overflow-hidden">
+                    <div className="aspect-square bg-white rounded-xl flex items-center justify-center border border-gray-100 overflow-hidden p-4">
                       <img 
-                        src={sneakerImage} 
+                        src={trailRunnerImage} 
                         alt="Alpine Trail Runner GTX" 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
