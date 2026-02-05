@@ -31,13 +31,13 @@ const CTASection = () => {
             Get Started
           </p>
           <h2 className="text-4xl sm:text-5xl lg:text-display font-serif text-dark-fg mb-6 tracking-tight">
-            Don't let AI shoppers{" "}
+            Your full AI Commerce Score.{" "}
             <span className="font-serif-italic text-transparent bg-clip-text bg-gradient-to-r from-holo-1 via-holo-2 to-holo-3">
-              pass you by
+              Completely free.
             </span>
           </h2>
           <p className="text-lg text-dark-muted mb-12 font-sans max-w-xl mx-auto">
-            Get your AI Commerce Score now — free, fast, and actionable.
+            No tiers, no trials, no credit card. Just paste your URL.
           </p>
 
           {/* URL Input */}

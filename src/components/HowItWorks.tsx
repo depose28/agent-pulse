@@ -5,8 +5,8 @@ const steps = [
   {
     number: "01",
     icon: Link,
-    title: "Enter your URL",
-    description: "Paste any website URL. That's it.",
+    title: "Paste any website URL",
+    description: "Enter any URL — your store, service site, or landing page. That's it.",
   },
   {
     number: "02",
@@ -19,7 +19,7 @@ const steps = [
     number: "03",
     icon: ListChecks,
     title: "Get your score + fix list",
-    description: "Receive your AI Commerce Score with a prioritized action plan.",
+    description: "Receive your AI Commerce Score with a prioritized action plan — completely free.",
   },
 ];
 
