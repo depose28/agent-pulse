@@ -16,35 +16,22 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-4 md:gap-6 text-sm text-muted-foreground font-sans flex-wrap justify-center">
+          <div className="flex items-center gap-4 md:gap-6 text-sm text-muted-foreground font-sans">
             <Link
               to="/impressum"
               className="hover:text-foreground transition-colors"
             >
               Impressum
             </Link>
+            <span className="text-border">·</span>
             <Link
               to="/privacy"
               className="hover:text-foreground transition-colors"
             >
-              Privacy Policy
+              Privacy
             </Link>
-            <Link
-              to="/terms"
-              className="hover:text-foreground transition-colors"
-            >
-              Terms of Service
-            </Link>
-            <span className="hidden sm:inline text-border">·</span>
-            <span>
-              Built by{" "}
-              <a
-                href="#"
-                className="text-foreground hover:text-holo-2 transition-colors"
-              >
-                re:found Labs
-              </a>
-            </span>
+            <span className="text-border">·</span>
+            <span>Built by AgentPulse</span>
           </div>
         </div>
 
