@@ -216,6 +216,19 @@ const Hero = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Social Proof Counter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
+          className="text-center mt-12 md:mt-20"
+        >
+          <p className="text-dark-muted font-sans text-sm md:text-base">
+            <span className="text-dark-fg font-mono text-lg md:text-xl font-medium">247</span>
+            {" "}stores already diagnosed
+          </p>
+        </motion.div>
       </div>
     </section>
   );
