@@ -205,7 +205,7 @@ const ProblemSection = () => {
                 {/* Decision - Inline on mobile */}
                 <div className="mt-3 md:mt-6 p-3 md:p-6 bg-gradient-to-r from-rose-500/15 via-rose-500/10 to-transparent rounded-lg md:rounded-xl border border-rose-500/25">
                   <div className="flex items-center gap-3 md:gap-4">
-                    <span className="text-xl md:text-3xl">😞</span>
+                    <span className="text-xl md:text-3xl">🤖</span>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm md:text-lg font-sans text-white font-medium">
                         Agent skipped — sent to competitor
