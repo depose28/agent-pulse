@@ -80,9 +80,10 @@ const Navbar = () => {
           {/* CTA */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-white text-foreground rounded-lg text-sm font-sans font-medium hover:bg-white/90 transition-all shadow-lg"
+            className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-foreground rounded-lg text-xs sm:text-sm font-sans font-medium hover:bg-white/90 transition-all shadow-lg"
           >
-            Get Your Score
+            <span className="hidden sm:inline">Get Your Score</span>
+            <span className="sm:hidden">Home</span>
           </button>
         </div>
       </div>
