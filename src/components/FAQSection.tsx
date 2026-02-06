@@ -23,9 +23,9 @@ const faqs = [
       "No. AgentPulse works for any website where AI agents might discover, evaluate, or transact — online stores, service businesses, marketplaces, SaaS pricing pages, booking sites, and more. If an AI agent can interact with your site, we can score it.",
   },
   {
-    question: "Is this really free?",
+    question: "How does AgentPulse make money?",
     answer:
-      "Yes. The full scan, your score, the fix list, and your shareable badge — all free. We recommend tools that can help you fix issues, and some of those are affiliate links. That's how we keep the lights on.",
+      "We keep the scan completely free because we believe every site deserves to know where it stands. When we recommend tools to fix specific issues, some of those are affiliate partnerships — meaning we earn a small commission if you sign up. Every tool we recommend has been independently vetted by our team for quality and effectiveness. We'll never recommend something just because it pays us. If a fix doesn't require a tool, we'll tell you how to do it yourself.",
   },
   {
     question: "How is this different from an SEO audit?",

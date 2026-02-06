@@ -98,9 +98,23 @@ const FixRecommendationsSection = () => {
                   <ArrowRight className="w-3 h-3 md:w-3.5 md:h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
-            </motion.div>
+              </motion.div>
           ))}
         </div>
+
+        {/* Why is this free? note */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="max-w-2xl mx-auto mt-10 md:mt-14 text-center"
+        >
+          <p className="text-xs md:text-sm text-dark-muted/70 font-sans leading-relaxed">
+            <span className="font-medium text-dark-muted">Why is this free?</span>{" "}
+            We earn a commission when you use one of our recommended tools to fix an issue. Every tool we recommend has been vetted by our team. You'll never see a recommendation we wouldn't use ourselves.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
