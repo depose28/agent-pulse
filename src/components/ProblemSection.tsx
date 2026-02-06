@@ -21,11 +21,12 @@ const ProblemSection = () => {
             The Shift
           </p>
           <h2 className="text-2xl sm:text-4xl lg:text-display font-serif text-foreground mb-4 md:mb-6 tracking-tight">
-            The way people shop is{" "}
-            <span className="font-serif-italic">changing</span>
+            Your store speaks <span className="font-serif-italic">human</span>.
+            <br />
+            Agents don't.
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground font-sans px-2">
-            What you see isn't what AI sees.
+          <p className="text-base md:text-lg text-muted-foreground font-sans px-2 leading-relaxed">
+            AI shopping agents are becoming the new front door to commerce. They read structured data, not product pages. They parse schemas, not marketing copy. If your store can't communicate in their language, you're invisible — and your competitors aren't.
           </p>
         </motion.div>
 
@@ -217,9 +218,9 @@ const ProblemSection = () => {
           className="grid grid-cols-3 gap-3 md:gap-6 mt-10 md:mt-20 max-w-4xl mx-auto"
         >
           {[
-            { stat: "10×", label: "AI purchase growth by 2027" },
-            { stat: "90%", label: "Sites have broken AI markup" },
-            { stat: "30%", label: "Higher visibility with schemas" },
+            { stat: "4,700%", label: "YoY growth in AI-referred traffic" },
+            { stat: "$17.5T", label: "Spending influenced by AI by 2030" },
+            { stat: "73%", label: "Stores fail basic agent readiness" },
           ].map((item, i) => (
             <div
               key={i}
