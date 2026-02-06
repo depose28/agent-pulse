@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const recommendations = [
   {
@@ -9,6 +10,7 @@ const recommendations = [
     issue: "Missing product review schema",
     impact: "AI agents can't verify social proof for your products",
     fix: "Add review markup with Judge.me or Yotpo",
+    isAffiliate: true,
   },
   {
     severity: "medium",
@@ -17,6 +19,7 @@ const recommendations = [
     issue: "Incomplete offer schema",
     impact: "AI agents see your products but can't confirm pricing or availability",
     fix: "Update structured data with Schema Pro",
+    isAffiliate: true,
   },
   {
     severity: "medium",
@@ -25,6 +28,7 @@ const recommendations = [
     issue: "No JSON-LD product markup",
     impact: "AI agents can't parse your product catalog",
     fix: "Implement JSON-LD with Rank Math or custom markup",
+    isAffiliate: true,
   },
 ];
 
@@ -55,6 +59,22 @@ const FixRecommendationsSection = () => {
             Every issue comes with a clear fix recommendation.
           </p>
         </motion.div>
+
+        {/* Affiliate disclosure notice */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center text-xs md:text-sm text-dark-muted/80 font-sans mb-6 md:mb-8 max-w-2xl mx-auto"
+        >
+          Some recommendations below contain affiliate links.{" "}
+          <Link
+            to="/privacy"
+            className="text-holo-2 hover:text-holo-1 transition-colors underline underline-offset-2"
+          >
+            Learn more
+          </Link>
+        </motion.p>
 
         {/* Fix Cards - Stack on mobile */}
         <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
@@ -93,12 +113,19 @@ const FixRecommendationsSection = () => {
                 <p className="text-xs md:text-sm text-dark-fg font-sans mb-2 md:mb-3">
                   {rec.fix}
                 </p>
-                <button className="inline-flex items-center gap-1 md:gap-1.5 text-xs md:text-sm font-sans text-holo-2 hover:text-holo-1 transition-colors group">
-                  Fix This
-                  <ArrowRight className="w-3 h-3 md:w-3.5 md:h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                </button>
+                <div className="flex items-center gap-2">
+                  <button className="inline-flex items-center gap-1 md:gap-1.5 text-xs md:text-sm font-sans text-holo-2 hover:text-holo-1 transition-colors group">
+                    Fix This
+                    <ArrowRight className="w-3 h-3 md:w-3.5 md:h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </button>
+                  {rec.isAffiliate && (
+                    <span className="px-1.5 py-0.5 rounded text-[9px] md:text-[10px] font-mono bg-dark-border/50 text-dark-muted/70 uppercase tracking-wide">
+                      Affiliate
+                    </span>
+                  )}
+                </div>
               </div>
-              </motion.div>
+            </motion.div>
           ))}
         </div>
 
