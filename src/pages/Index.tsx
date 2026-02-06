@@ -21,9 +21,9 @@ const Index = () => {
         <HowItWorks />
         <FrameworkSection />
         <FixRecommendationsSection />
+        <ShareScoreSection />
         <PricingSection />
         <WhyFreeSection />
-        <ShareScoreSection />
         <FAQSection />
         <CTASection />
       </main>
