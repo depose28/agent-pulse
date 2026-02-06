@@ -113,17 +113,10 @@ const FixRecommendationsSection = () => {
                 <p className="text-xs md:text-sm text-dark-fg font-sans mb-2 md:mb-3">
                   {rec.fix}
                 </p>
-                <div className="flex items-center gap-2">
-                  <button className="inline-flex items-center gap-1 md:gap-1.5 text-xs md:text-sm font-sans text-holo-2 hover:text-holo-1 transition-colors group">
-                    Fix This
-                    <ArrowRight className="w-3 h-3 md:w-3.5 md:h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                  </button>
-                  {rec.isAffiliate && (
-                    <span className="px-1.5 py-0.5 rounded text-[9px] md:text-[10px] font-mono bg-dark-border/50 text-dark-muted/70 uppercase tracking-wide">
-                      Affiliate
-                    </span>
-                  )}
-                </div>
+                <button className="inline-flex items-center gap-1 md:gap-1.5 text-xs md:text-sm font-sans text-holo-2 hover:text-holo-1 transition-colors group">
+                  Fix This
+                  <ArrowRight className="w-3 h-3 md:w-3.5 md:h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </button>
               </div>
             </motion.div>
           ))}
