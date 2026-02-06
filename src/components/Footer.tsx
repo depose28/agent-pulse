@@ -18,13 +18,6 @@ const Footer = () => {
           {/* Links */}
           <div className="flex items-center gap-4 md:gap-6 text-sm text-muted-foreground font-sans">
             <Link
-              to="/impressum"
-              className="hover:text-foreground transition-colors"
-            >
-              Impressum
-            </Link>
-            <span className="text-border">·</span>
-            <Link
               to="/privacy"
               className="hover:text-foreground transition-colors"
             >
