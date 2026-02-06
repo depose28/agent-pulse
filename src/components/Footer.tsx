@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-lg holo-button flex items-center justify-center">
-              <span className="text-xs font-serif font-semibold bg-gradient-to-br from-dark-fg via-holo-1/80 to-holo-2/60 bg-clip-text text-transparent">A</span>
+              <span className="text-sm font-serif font-bold text-dark-bg">A</span>
             </div>
             <span className="text-lg font-serif text-foreground">
               Agent<span className="font-serif-italic">Pulse</span>
