@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +14,21 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    // If not on home page, navigate there first
+    if (location.pathname !== "/") {
+      navigate("/");
+      // Wait for navigation, then scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <motion.nav
@@ -25,44 +43,47 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <button
+            onClick={() => scrollToSection("hero")}
+            className="flex items-center gap-2 group"
+          >
             <div className="w-8 h-8 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
               <span className={`text-sm font-serif font-semibold ${scrolled ? "text-foreground" : "text-white"}`}>A</span>
             </div>
             <span className={`text-xl font-serif tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}>
               Agent<span className="font-serif-italic">Pulse</span>
             </span>
-          </a>
+          </button>
 
           {/* Nav Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#how-it-works"
+            <button
+              onClick={() => scrollToSection("how-it-works")}
               className={`transition-colors text-sm font-sans font-medium ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"}`}
             >
               How It Works
-            </a>
-            <a
-              href="#pricing"
+            </button>
+            <button
+              onClick={() => scrollToSection("pricing")}
               className={`transition-colors text-sm font-sans font-medium ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"}`}
             >
               Pricing
-            </a>
-            <a
-              href="#faq"
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
               className={`transition-colors text-sm font-sans font-medium ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-white/70 hover:text-white"}`}
             >
               FAQ
-            </a>
+            </button>
           </div>
 
           {/* CTA */}
-          <a
-            href="#hero"
+          <button
+            onClick={() => scrollToSection("hero")}
             className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-white text-foreground rounded-lg text-sm font-sans font-medium hover:bg-white/90 transition-all shadow-lg"
           >
             Get Your Score
-          </a>
+          </button>
         </div>
       </div>
     </motion.nav>
