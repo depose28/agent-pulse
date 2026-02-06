@@ -62,13 +62,15 @@ const PricingSection = () => {
             </ul>
 
             {/* CTA */}
-            <a
-              href="#hero"
+            <button
+              onClick={() => {
+                document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="w-full py-3 md:py-4 px-6 rounded-lg md:rounded-xl font-sans font-medium text-sm md:text-base flex items-center justify-center gap-2 transition-all holo-cta text-dark-fg"
             >
               Get Your Free Score
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </button>
           </div>
         </motion.div>
       </div>
