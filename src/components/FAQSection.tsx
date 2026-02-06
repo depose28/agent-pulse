@@ -18,6 +18,16 @@ const faqs = [
       "AI shopping agents are automated systems that help users discover and purchase products or services. Examples include ChatGPT plugins, Perplexity Shopping, Google Shopping Graph, and emerging AI commerce protocols. These agents read and interpret your site's structured data to understand your offerings.",
   },
   {
+    question: "Is the free scan really free?",
+    answer:
+      "Yes. You get your AI Commerce Score, layer breakdown, and top 3 priority issues completely free. No credit card needed. If you want the full issue list with implementation guidance and competitor benchmarking, the full report is a one-time $49 payment.",
+  },
+  {
+    question: "What do I get in the full report that I don't get for free?",
+    answer:
+      "The free Pulse Check shows your score and top 3 issues. The full report reveals every issue we found, with detailed implementation guidance, platform-specific code snippets, recommended fix tools, and a competitor comparison. Think of the free scan as the diagnosis — the full report is the treatment plan.",
+  },
+  {
     question: "Is this only for e-commerce stores?",
     answer:
       "No. AgentPulse works for any website where AI agents might discover, evaluate, or transact — online stores, service businesses, marketplaces, SaaS pricing pages, booking sites, and more. If an AI agent can interact with your site, we can score it.",
@@ -25,7 +35,7 @@ const faqs = [
   {
     question: "How does AgentPulse make money?",
     answer:
-      "We keep the scan completely free because we believe every site deserves to know where it stands. When we recommend tools to fix specific issues, some of those are affiliate partnerships — meaning we earn a small commission if you sign up. Every tool we recommend has been independently vetted by our team for quality and effectiveness. We'll never recommend something just because it pays us. If a fix doesn't require a tool, we'll tell you how to do it yourself.",
+      "The full report is $49. We also earn affiliate commissions when you use one of our recommended tools to fix an issue. Every tool we recommend has been vetted by our team — we'll never recommend something just because it pays us. If a fix doesn't require a tool, we'll tell you how to do it yourself.",
   },
   {
     question: "How is this different from an SEO audit?",

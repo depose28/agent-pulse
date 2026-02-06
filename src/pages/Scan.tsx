@@ -61,9 +61,7 @@ const Scan = () => {
           >
             <button
               onClick={() => {
-                // Future: navigate to results page
-                // For now, navigate home
-                navigate("/");
+                navigate(`/results?url=${encodeURIComponent(url)}`);
               }}
               className="holo-cta px-8 py-4 rounded-xl font-sans text-base md:text-lg font-medium"
             >
