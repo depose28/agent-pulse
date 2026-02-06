@@ -92,7 +92,7 @@ const ScoreGauge = ({ score, size = 100, showLabel = true }: ScoreGaugeProps) =>
           <span
             className="font-serif text-dark-fg tabular-nums text-center"
             style={{ 
-              fontSize: size * 0.32,
+              fontSize: size * 0.38,
               lineHeight: 1,
               fontWeight: 500,
               width: '100%',
