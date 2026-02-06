@@ -48,7 +48,7 @@ const Navbar = () => {
             className="flex items-center gap-2 group"
           >
             <div className="w-8 h-8 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-              <span className={`text-sm font-serif font-semibold ${scrolled ? "text-foreground" : "text-white"}`}>A</span>
+              <span className={`text-sm font-serif font-semibold bg-gradient-to-br from-white via-holo-1/80 to-holo-2/60 bg-clip-text ${scrolled ? "text-transparent" : "text-transparent"}`}>A</span>
             </div>
             <span className={`text-xl font-serif tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}>
               Agent<span className="font-serif-italic">Pulse</span>
