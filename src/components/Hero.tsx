@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import ScoreGauge from "./ScoreGauge";
+import SocialProofCounter from "./SocialProofCounter";
 
 const Hero = () => {
   const [url, setUrl] = useState("");
@@ -92,10 +93,14 @@ const Hero = () => {
               </div>
             </form>
 
-            {/* Trust indicators - Inline on mobile */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4 text-[11px] md:text-xs text-dark-muted font-sans mb-4 md:mb-6">
-              <span>✓ No credit card</span>
-              <span>✓ Results in 2 min</span>
+            {/* Social proof + Trust indicators */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 md:gap-6 mb-4 md:mb-6">
+              <SocialProofCounter />
+              <span className="hidden sm:block w-px h-4 bg-dark-border" />
+              <div className="flex items-center gap-3 md:gap-4 text-[11px] md:text-xs text-dark-muted font-sans">
+                <span>✓ No credit card</span>
+                <span>✓ Results in 2 min</span>
+              </div>
             </div>
 
             {/* Works with bar - Hidden on mobile, shown on desktop */}
