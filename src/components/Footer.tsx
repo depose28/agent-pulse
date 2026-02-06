@@ -29,6 +29,12 @@ const Footer = () => {
             >
               Privacy Policy
             </Link>
+            <Link
+              to="/terms"
+              className="hover:text-foreground transition-colors"
+            >
+              Terms of Service
+            </Link>
             <span className="hidden sm:inline text-border">·</span>
             <span>
               Built by{" "}
