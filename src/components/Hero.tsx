@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import ScoreGauge from "./ScoreGauge";
@@ -6,13 +7,12 @@ import SocialProofCounter from "./SocialProofCounter";
 
 const Hero = () => {
   const [url, setUrl] = useState("");
-  const [isScanning, setIsScanning] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (url) {
-      setIsScanning(true);
-      setTimeout(() => setIsScanning(false), 2000);
+      navigate(`/scan?url=${encodeURIComponent(url)}`);
     }
   };
 
@@ -75,20 +75,10 @@ const Hero = () => {
                 </div>
                 <button
                   type="submit"
-                  disabled={isScanning}
                   className="group px-6 md:px-8 py-3.5 md:py-4 holo-cta rounded-xl font-sans text-base md:text-lg font-medium transition-all flex items-center justify-center gap-2"
                 >
-                  {isScanning ? (
-                    <>
-                      <div className="w-4 h-4 md:w-5 md:h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      <span>Scanning...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Get Your Score</span>
-                      <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-0.5 transition-transform" />
-                    </>
-                  )}
+                  <span>Get Your Score</span>
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
             </form>
