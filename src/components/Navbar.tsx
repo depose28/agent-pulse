@@ -82,8 +82,7 @@ const Navbar = () => {
             onClick={() => scrollToSection("hero")}
             className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-foreground rounded-lg text-xs sm:text-sm font-sans font-medium hover:bg-white/90 transition-all shadow-lg"
           >
-            <span className="hidden sm:inline">Get Your Score</span>
-            <span className="sm:hidden">Home</span>
+            Get Your Score
           </button>
         </div>
       </div>
