@@ -43,10 +43,10 @@ const ShareScoreSection = () => {
                   <div className="flex items-center justify-between mb-3 md:mb-4">
                     <div className="flex items-center gap-1.5 md:gap-2">
                       <div className="w-5 h-5 md:w-6 md:h-6 rounded-md holo-button flex items-center justify-center">
-                        <span className="text-[8px] md:text-[10px] font-serif font-semibold text-dark-fg">A</span>
+                        <span className="text-[8px] md:text-[10px] font-serif font-semibold text-dark-fg">r</span>
                       </div>
                       <span className="text-xs md:text-sm font-serif text-dark-fg">
-                        Agent<span className="font-serif-italic">Pulse</span>
+                        re<span className="font-serif-italic">Found</span>
                       </span>
                     </div>
                     <span className="text-[8px] md:text-[10px] font-mono text-dark-muted uppercase tracking-wider">
@@ -70,7 +70,7 @@ const ShareScoreSection = () => {
                   {/* Footer */}
                   <div className="pt-3 md:pt-4 border-t border-dark-border">
                     <p className="text-[10px] md:text-xs text-dark-muted font-sans text-center">
-                      Scan yours → <span className="text-holo-2">agentpulse.com</span>
+                      Scan yours → <span className="text-holo-2">getrefound.ai</span>
                     </p>
                   </div>
                 </div>

@@ -30,17 +30,17 @@ const faqs = [
   {
     question: "Is this only for e-commerce stores?",
     answer:
-      "No. AgentPulse works for any website where AI agents might discover, evaluate, or transact — online stores, service businesses, marketplaces, SaaS pricing pages, booking sites, and more. If an AI agent can interact with your site, we can score it.",
+      "No. reFound works for any website where AI agents might discover, evaluate, or transact — online stores, service businesses, marketplaces, SaaS pricing pages, booking sites, and more. If an AI agent can interact with your site, we can score it.",
   },
   {
-    question: "How does AgentPulse make money?",
+    question: "How does reFound make money?",
     answer:
       "The full report is $49. We also earn affiliate commissions when you use one of our recommended tools to fix an issue. Every tool we recommend has been vetted by our team — we'll never recommend something just because it pays us. If a fix doesn't require a tool, we'll tell you how to do it yourself.",
   },
   {
     question: "How is this different from an SEO audit?",
     answer:
-      "Traditional SEO audits focus on search engine visibility for humans. AgentPulse specifically analyzes the machine-readable signals that AI agents use — Schema.org markup, JSON-LD, Open Graph, and commerce protocol readiness. We check if AI can actually interact with your site, not just find it.",
+      "Traditional SEO audits focus on search engine visibility for humans. reFound specifically analyzes the machine-readable signals that AI agents use — Schema.org markup, JSON-LD, Open Graph, and commerce protocol readiness. We check if AI can actually interact with your site, not just find it.",
   },
   {
     question: "How long does a scan take?",

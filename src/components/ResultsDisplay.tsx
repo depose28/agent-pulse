@@ -248,10 +248,10 @@ const ResultsDisplay = ({ tier, data, onUpgrade }: ResultsDisplayProps) => {
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-1.5">
                   <div className="w-5 h-5 rounded-md holo-button flex items-center justify-center">
-                    <span className="text-[8px] font-serif font-semibold text-dark-fg">A</span>
+                    <span className="text-[8px] font-serif font-semibold text-dark-fg">r</span>
                   </div>
                   <span className="text-xs font-serif text-dark-fg">
-                    Agent<span className="font-serif-italic">Pulse</span>
+                    re<span className="font-serif-italic">Found</span>
                   </span>
                 </div>
                 <span className="text-[8px] font-mono text-dark-muted uppercase tracking-wider">Verified</span>
@@ -265,7 +265,7 @@ const ResultsDisplay = ({ tier, data, onUpgrade }: ResultsDisplayProps) => {
               </div>
               <div className="pt-3 border-t border-dark-border">
                 <p className="text-[9px] text-dark-muted font-sans text-center">
-                  Scan yours → <span className="text-holo-2">agentpulse.com</span>
+                  Scan yours → <span className="text-holo-2">getrefound.ai</span>
                 </p>
               </div>
             </div>
@@ -289,7 +289,7 @@ const ResultsDisplay = ({ tier, data, onUpgrade }: ResultsDisplayProps) => {
           <p className="text-[10px] font-mono text-dark-muted uppercase tracking-wider mb-2 text-center">Embed Code</p>
           <div className="bg-dark-bg border border-dark-border rounded-lg p-3">
             <code className="text-[10px] md:text-xs font-mono text-dark-muted break-all">
-              {`<a href="https://agentpulse.com"><img src="https://agentpulse.com/badge/${data.overallScore}" alt="AI Commerce Score: ${data.overallScore}/100" /></a>`}
+              {`<a href="https://getrefound.ai"><img src="https://getrefound.ai/badge/${data.overallScore}" alt="AI Commerce Score: ${data.overallScore}/100" /></a>`}
             </code>
           </div>
         </div>

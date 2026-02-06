@@ -1,8 +1,8 @@
-# AgentPulse — AI Commerce Readiness Score
+# reFound — AI Commerce Readiness Score
 
-## What is AgentPulse?
+## What is reFound?
 
-AgentPulse is an AI Commerce Readiness diagnostic tool that scores any website (0–100) on how well it's prepared for the emerging wave of AI shopping agents. As AI agents increasingly discover, evaluate, compare, and transact on behalf of consumers, businesses need to ensure their digital presence is optimized for machine readability — not just human visitors.
+reFound is an AI Commerce Readiness diagnostic tool that scores any website (0–100) on how well it's prepared for the emerging wave of AI shopping agents. As AI agents increasingly discover, evaluate, compare, and transact on behalf of consumers, businesses need to ensure their digital presence is optimized for machine readability — not just human visitors.
 
 ### Who it's for
 
@@ -10,7 +10,7 @@ Digital leaders — e-commerce managers, founders, heads of digital — at mid-m
 
 ### Scope
 
-AgentPulse is positioned for **any website where AI agents discover, evaluate, or transact**, including:
+reFound is positioned for **any website where AI agents discover, evaluate, or transact**, including:
 
 - E-commerce stores
 - Service businesses
@@ -21,7 +21,7 @@ AgentPulse is positioned for **any website where AI agents discover, evaluate, o
 
 ## Business Model
 
-AgentPulse uses a **hybrid monetization model**: free teaser + paid full report.
+reFound uses a **hybrid monetization model**: free teaser + paid full report.
 
 ### Free Tier — "Pulse Check"
 
@@ -152,7 +152,7 @@ The results page renders `ResultsDisplay` with `tier="free"` by default. This sh
    - For the **#1 priority issue only**: a "Fix This →" affiliate link with an "Affiliate" badge
 
 5. **Shareable Score Badge** — A miniature branded card mockup with:
-   - AgentPulse branding
+   - reFound branding
    - The user's score and `ScoreGauge` mini ring
    - "Share on LinkedIn" and "Share on X" buttons
    - Embed code snippet for websites
@@ -293,7 +293,7 @@ The FAQ section includes three entries specifically addressing the hybrid model:
 
 2. **"What do I get in the full report that I don't get for free?"** — Frames the free scan as "the diagnosis" and the full report as "the treatment plan" with code snippets, platform instructions, and competitor comparison.
 
-3. **"How does AgentPulse make money?"** — Transparent disclosure: $49 full report revenue + affiliate commissions on recommended tools, with an emphasis on editorial integrity.
+3. **"How does reFound make money?"** — Transparent disclosure: $49 full report revenue + affiliate commissions on recommended tools, with an emphasis on editorial integrity.
 
 ---
 
