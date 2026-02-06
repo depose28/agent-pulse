@@ -26,7 +26,7 @@ const ProblemSection = () => {
             Agents don't.
           </h2>
           <p className="text-base md:text-lg text-muted-foreground font-sans px-2 leading-relaxed">
-            AI shopping agents are becoming the new front door to commerce. They read structured data, not product pages. They parse schemas, not marketing copy. If your store can't communicate in their language, you're invisible — and your competitors aren't.
+            AI shopping agents are becoming the new front door to commerce. If your store can't communicate in their language, you're invisible — and your competitors aren't.
           </p>
         </motion.div>
 
