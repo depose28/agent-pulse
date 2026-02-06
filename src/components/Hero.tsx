@@ -122,17 +122,15 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className="flex items-center justify-between mb-4 md:mb-10"
+                className="flex flex-col items-center mb-4 md:mb-10"
               >
-                <div>
-                  <p className="text-[9px] md:text-[10px] font-mono text-dark-muted uppercase tracking-[0.15em] md:tracking-[0.2em] mb-1 md:mb-2">
-                    AI Commerce Score™
-                  </p>
-                  <p className="text-sm md:text-lg text-dark-fg font-sans font-medium">
-                    example-site.com
-                  </p>
-                </div>
-                <ScoreGauge score={73} size={70} />
+                <p className="text-[9px] md:text-[10px] font-mono text-dark-muted uppercase tracking-[0.15em] md:tracking-[0.2em] mb-1 md:mb-2">
+                  AI Commerce Score™
+                </p>
+                <p className="text-sm md:text-lg text-dark-fg font-sans font-medium mb-4 md:mb-6">
+                  example-site.com
+                </p>
+                <ScoreGauge score={73} size={120} />
               </motion.div>
 
               {/* Layer Breakdown - Compact on mobile */}
