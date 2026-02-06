@@ -5,7 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import FrameworkSection from "@/components/FrameworkSection";
 import FixRecommendationsSection from "@/components/FixRecommendationsSection";
 import PricingSection from "@/components/PricingSection";
-import WhyFreeSection from "@/components/WhyFreeSection";
+
 import ShareScoreSection from "@/components/ShareScoreSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -23,7 +23,7 @@ const Index = () => {
         <FixRecommendationsSection />
         <ShareScoreSection />
         <PricingSection />
-        <WhyFreeSection />
+        
         <FAQSection />
         <CTASection />
       </main>
