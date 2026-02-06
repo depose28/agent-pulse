@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-lg holo-button flex items-center justify-center">
-              <span className="text-sm font-serif font-bold text-dark-bg">A</span>
+              <span className="text-sm font-serif font-bold text-white">A</span>
             </div>
             <span className="text-lg font-serif text-foreground">
               Agent<span className="font-serif-italic">Pulse</span>
