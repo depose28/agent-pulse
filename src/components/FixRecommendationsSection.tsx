@@ -102,16 +102,18 @@ const FixRecommendationsSection = () => {
           ))}
         </div>
 
-        {/* Why is this free? note */}
+        {/* Why is this free? section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="max-w-2xl mx-auto mt-10 md:mt-14 text-center"
+          className="max-w-2xl mx-auto mt-16 md:mt-24 text-center"
         >
-          <p className="text-xs md:text-sm text-dark-muted/70 font-sans leading-relaxed">
-            <span className="font-medium text-dark-muted">Why is this free?</span>{" "}
+          <h3 className="text-xl md:text-2xl font-serif text-dark-fg mb-3 md:mb-4 tracking-tight">
+            Why is this <span className="font-serif-italic">free</span>?
+          </h3>
+          <p className="text-sm md:text-base text-dark-muted font-sans leading-relaxed">
             We earn a commission when you use one of our recommended tools to fix an issue. Every tool we recommend has been vetted by our team. You'll never see a recommendation we wouldn't use ourselves.
           </p>
         </motion.div>
