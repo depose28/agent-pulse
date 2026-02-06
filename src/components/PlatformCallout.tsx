@@ -108,7 +108,7 @@ const PlatformCallout = () => {
               onClick={scrollToHero}
               className="holo-button px-6 md:px-8 py-2.5 md:py-3 rounded-lg md:rounded-xl text-sm md:text-base font-sans font-medium inline-flex items-center gap-2 group"
             >
-              Check My Site
+              Get Your Score
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </button>
 
