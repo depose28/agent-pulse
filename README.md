@@ -19,31 +19,59 @@ AgentPulse is positioned for **any website where AI agents discover, evaluate, o
 
 ## Business Model
 
-AgentPulse is **100% free to use**. Revenue is generated through **affiliate links** embedded in the fix recommendations — when users scan their site and receive actionable improvement suggestions, the recommended tools and services include affiliate partnerships.
+AgentPulse uses a **hybrid monetization model**: free teaser + paid full report.
+
+### Free Tier — "Pulse Check"
+
+- AI Commerce Score (0-100) with animated score ring
+- FIND / TRUST / BUY layer breakdown with progress bars
+- Top 3 priority issues with severity ratings
+- Shareable score badge (LinkedIn, X, embed code)
+- One affiliate "Fix This →" link for the #1 priority issue
+
+### Paid Tier — "Full Report" ($49 one-time)
+
+- All issues identified with severity ratings
+- Implementation guidance with code snippets
+- Platform-specific fix instructions (Shopify, WooCommerce, etc.)
+- Recommended tools for each issue (with affiliate "Fix This →" links)
+- Competitor benchmark (scan 1 competitor and compare scores)
+- PDF export of the complete report
+
+### Revenue Streams
+
+1. **Full Report sales** — $49 one-time payment per scan (via Lemon Squeezy)
+2. **Affiliate commissions** — earned when users click "Fix This →" tool recommendations in results
 
 Key principles:
 
-- The scan and score are completely free, with no paywalls or gated features
-- Monetization is transparent: the Pricing section includes a "Why is this free?" explanation, and detailed FAQ entries cover how the tool sustains itself
-- Affiliate disclosure labels are reserved for tool links within scan results only, keeping the landing page clean and trustworthy
+- The free scan is genuinely useful, not a crippled version
+- Monetization is transparent: FAQ entries and pricing section explain the model clearly
+- Affiliate disclosure labels ("Affiliate" badge) appear next to tool links in results only
+- Every recommended tool is vetted by the team
 
 ## Website Structure
 
 The landing page is a single-page marketing site built as a conversion funnel:
 
-| Section                    | Purpose                                                                 |
-| -------------------------- | ----------------------------------------------------------------------- |
-| **Navbar**                 | Sticky navigation with links to key sections                            |
-| **Hero**                   | Score gauge visual + CTA to scan your site                              |
-| **ProblemSection**         | Frames the problem: AI agents are changing commerce                     |
-| **HowItWorks**             | Three-step explainer (Enter URL → Get Score → Fix Issues)               |
-| **FrameworkSection**       | Details the scoring framework / what's measured                         |
-| **FixRecommendationsSection** | Sample recommendations with affiliate tool links (monetization layer) |
-| **ShareScoreSection**      | Social proof / share your score with peers                              |
-| **PricingSection**         | "Free" pricing card with "Why is this free?" transparency               |
-| **FAQSection**             | Common questions including business model disclosure                    |
-| **CTASection**             | Final conversion call-to-action                                        |
-| **Footer**                 | Links, legal, branding                                                  |
+| Section                       | Purpose                                                                 |
+| ----------------------------- | ----------------------------------------------------------------------- |
+| **Navbar**                    | Sticky navigation with links to key sections                            |
+| **Hero**                      | Score gauge visual + CTA to scan your site                              |
+| **ProblemSection**            | Frames the problem: AI agents are changing commerce                     |
+| **HowItWorks**                | Three-step explainer (Enter URL → Get Score → Fix Issues)               |
+| **FrameworkSection**          | Details the scoring framework / what's measured                         |
+| **FixRecommendationsSection** | Sample recommendations with affiliate tool links                        |
+| **ShareScoreSection**         | Social proof / share your score with peers                              |
+| **PricingSection**            | Two-tier pricing: Pulse Check (Free) + Full Report ($49)                |
+| **FAQSection**                | Common questions including pricing and business model disclosure         |
+| **CTASection**                | Final conversion CTA with URL input                                     |
+| **Footer**                    | Links, legal, branding                                                  |
+
+### Results Flow
+
+1. **Scan** (`/scan`) — Animated diagnostic interstitial with progress ring
+2. **Results** (`/results`) — Free results shown immediately; upgrade wall with blurred preview of remaining issues; paid tier reveals full report
 
 Additional pages: **Privacy** policy page and a **404** fallback.
 
