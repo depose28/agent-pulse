@@ -52,6 +52,7 @@ const PricingSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
+            className="pt-3"
           >
             <div className="holo-border-dark glow-holo p-6 md:p-8 h-full flex flex-col">
               <div className="mb-4 md:mb-6">
