@@ -114,7 +114,7 @@ const PlatformCallout = () => {
 
             {/* Small Print */}
             <p className="mt-3 md:mt-4 text-[10px] md:text-xs text-muted-foreground/60 font-sans">
-              Based on aggregate data from AgentPulse scans. Individual results vary.
+              Based on aggregate data from reFound scans. Individual results vary.
             </p>
           </motion.div>
         )}

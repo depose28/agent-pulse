@@ -48,10 +48,10 @@ const Navbar = () => {
             className="flex items-center gap-2 group"
           >
             <div className="w-8 h-8 rounded-lg holo-button flex items-center justify-center">
-              <span className="text-base font-serif font-bold text-white">A</span>
+              <span className="text-base font-serif font-bold text-white">r</span>
             </div>
             <span className={`text-xl font-serif tracking-tight ${scrolled ? "text-foreground" : "text-white"}`}>
-              Agent<span className="font-serif-italic">Pulse</span>
+              re<span className="font-serif-italic">Found</span>
             </span>
           </button>
 

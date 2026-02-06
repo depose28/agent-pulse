@@ -8,10 +8,10 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-lg holo-button flex items-center justify-center">
-              <span className="text-sm font-serif font-bold text-white">A</span>
+              <span className="text-sm font-serif font-bold text-white">r</span>
             </div>
             <span className="text-lg font-serif text-foreground">
-              Agent<span className="font-serif-italic">Pulse</span>
+              re<span className="font-serif-italic">Found</span>
             </span>
           </div>
 
@@ -24,13 +24,13 @@ const Footer = () => {
               Privacy
             </Link>
             <span className="text-border">·</span>
-            <span>Built by AgentPulse</span>
+            <span>Built by reFound</span>
           </div>
         </div>
 
         {/* Copyright */}
         <div className="mt-8 text-center text-xs text-muted-foreground font-sans">
-          © {new Date().getFullYear()} AgentPulse. All rights reserved.
+          © {new Date().getFullYear()} reFound. All rights reserved.
         </div>
       </div>
     </footer>

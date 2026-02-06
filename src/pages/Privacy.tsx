@@ -13,7 +13,7 @@ const Privacy = () => {
             className="inline-flex items-center gap-2 text-dark-muted hover:text-dark-fg transition-colors font-sans text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to AgentPulse
+            Back to reFound
           </Link>
         </div>
       </header>
@@ -39,7 +39,7 @@ const Privacy = () => {
             <section className="space-y-4">
               <h2 className="text-2xl font-serif text-dark-fg">1. Overview</h2>
               <p className="text-dark-muted font-sans leading-relaxed">
-                AgentPulse is operated by re:found Labs, Berlin, Germany. We
+                reFound is operated by re:found Labs, Berlin, Germany. We
                 take your privacy seriously. This policy explains what data we
                 collect, why we collect it, and your rights regarding that data.
               </p>
@@ -57,10 +57,10 @@ const Privacy = () => {
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:hello@agentpulse.com"
+                    href="mailto:hello@getrefound.ai"
                     className="text-holo-2 hover:text-holo-1 transition-colors"
                   >
-                    hello@agentpulse.com
+                    hello@getrefound.ai
                   </a>
                 </p>
               </div>
@@ -97,7 +97,7 @@ const Privacy = () => {
                 <h3 className="text-lg font-serif text-dark-fg">Usage data</h3>
                 <p className="text-dark-muted font-sans leading-relaxed">
                   We use privacy-friendly analytics to understand how visitors
-                  use AgentPulse. This may include page views, referral sources,
+                  use reFound. This may include page views, referral sources,
                   and general device/browser information. We do not use this
                   data to personally identify you.
                 </p>
@@ -179,10 +179,10 @@ const Privacy = () => {
                 We retain your email address and scan results for 12 months. You
                 can request deletion at any time by emailing{" "}
                 <a
-                  href="mailto:hello@agentpulse.com"
+                  href="mailto:hello@getrefound.ai"
                   className="text-holo-2 hover:text-holo-1 transition-colors"
                 >
-                  hello@agentpulse.com
+                  hello@getrefound.ai
                 </a>
                 .
               </p>
@@ -209,10 +209,10 @@ const Privacy = () => {
               <p className="text-dark-muted font-sans leading-relaxed mt-4">
                 To exercise any of these rights, email us at{" "}
                 <a
-                  href="mailto:hello@agentpulse.com"
+                  href="mailto:hello@getrefound.ai"
                   className="text-holo-2 hover:text-holo-1 transition-colors"
                 >
-                  hello@agentpulse.com
+                  hello@getrefound.ai
                 </a>
                 . We will respond within 30 days.
               </p>
@@ -245,10 +245,10 @@ const Privacy = () => {
                 <br />
                 Email:{" "}
                 <a
-                  href="mailto:hello@agentpulse.com"
+                  href="mailto:hello@getrefound.ai"
                   className="text-holo-2 hover:text-holo-1 transition-colors"
                 >
-                  hello@agentpulse.com
+                  hello@getrefound.ai
                 </a>
               </p>
             </section>
