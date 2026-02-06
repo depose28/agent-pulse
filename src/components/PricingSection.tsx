@@ -98,14 +98,16 @@ const PricingSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
+            className="relative pt-3"
           >
-            <div className="relative holo-border-dark glow-holo p-6 md:p-8 h-full flex flex-col">
-              {/* Recommended badge */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="px-3 py-1 rounded-full text-[10px] md:text-xs font-mono uppercase tracking-wider holo-cta text-dark-fg">
-                  Full Diagnosis
-                </span>
-              </div>
+            {/* Recommended badge — outside overflow:hidden container */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
+              <span className="px-3 py-1 rounded-full text-[10px] md:text-xs font-mono uppercase tracking-wider holo-cta text-dark-fg whitespace-nowrap">
+                Full Diagnosis
+              </span>
+            </div>
+
+            <div className="holo-border-dark glow-holo p-6 md:p-8 h-full flex flex-col">
 
               <div className="mb-4 md:mb-6 mt-2">
                 <p className="text-[10px] md:text-xs font-mono text-dark-muted uppercase tracking-[0.15em] mb-2">
