@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Bot, Star, Check, X, AlertTriangle } from "lucide-react";
+import { User, Bot, Star, Check, X } from "lucide-react";
 import trailRunnerImage from "@/assets/trail-runner.png";
+import PlatformCallout from "./PlatformCallout";
 
 const ProblemSection = () => {
   const [viewMode, setViewMode] = useState<"human" | "agent">("human");
@@ -28,22 +29,6 @@ const ProblemSection = () => {
           </p>
         </motion.div>
 
-        {/* Platform Objection Callout - More compact on mobile */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mx-auto mb-8 md:mb-16"
-        >
-          <div className="relative p-4 md:p-6 rounded-xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/20">
-            <p className="text-base md:text-lg font-serif text-foreground mb-1 md:mb-2">
-              "Think your platform handles this?"
-            </p>
-            <p className="text-muted-foreground font-sans text-xs md:text-sm leading-relaxed">
-              Shopify, WooCommerce, and others cover the basics. But your specific product data, review markup, and offer schema? That's where most sites break.
-            </p>
-          </div>
-        </motion.div>
 
         {/* View Toggle */}
         <motion.div
@@ -220,6 +205,9 @@ const ProblemSection = () => {
             )}
           </AnimatePresence>
         </motion.div>
+
+        {/* Interactive Platform Callout - After Human/Agent toggle */}
+        <PlatformCallout />
 
         {/* Stats - More compact on mobile */}
         <motion.div
